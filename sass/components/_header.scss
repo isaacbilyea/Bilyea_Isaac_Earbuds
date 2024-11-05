@@ -1,0 +1,12 @@
+@use '../abstracts' as a;
+
+header {
+
+    background-color: a.$primary-color;
+    text-align: center;
+
+    h1 {
+        color: a.$accent-color;
+        font-size: 6rem;
+    }
+}
