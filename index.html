@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.typekit.net/bhw3oux.css">
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <title>Stride Earbuds</title>
+</head>
+<header>
+    <h1>STRIDE</h1>
+</header>
+
+<body>
+    <model-viewer id="model" src="model/Bilyea_Isaac_Earbuds.gltf" ar ar-modes="webxr scene-viewer quick-look"
+        camera-controls tone-mapping="neutral" poster="images/poster.webp" shadow-intensity="1.75" shadow-softness="1"
+        exposure="0.75" environment-image="images/studio_small_09_4k.hdr" camera-orbit="73.86deg 82.57deg 351.6m"
+        field-of-view="30deg">
+        <button class="Hotspot" slot="hotspot-1"
+            data-position="-416.56149278137553m 42.517582943297384m 394.18555055022284m"
+            data-normal="-0.9686496209397094m 0.0037609272285329316m 0.24840243010030905m"
+            data-visibility-attribute="visible">
+            <span class="Hotspot-dot"></span>
+            <div class="HotspotAnnotation" id="hotspot-1">
+            </div>
+        </button>
+        <button class="Hotspot" slot="hotspot-2"
+            data-position="-451.5416200940677m 51.68318027330069m 310.2930297711527m"
+            data-normal="-0.9058271119635365m 0.2997035609461799m 0.2994244792731189m"
+            data-visibility-attribute="visible">
+            <span class="Hotspot-dot"></span>
+            <div class="HotspotAnnotation" id="hotspot-2">
+            </div>
+        </button>
+        <button class="Hotspot" slot="hotspot-3"
+            data-position="-373.29470350265353m 119.03902223152934m 390.58444444986117m"
+            data-normal="0.9859535803530111m 0.06692112301081456m -0.15302647053385923m"
+            data-visibility-attribute="visible">
+            <span class="Hotspot-dot"></span>
+            <div class="HotspotAnnotation" id="hotspot-3">
+            </div>
+        </button>
+        <button class="Hotspot" slot="hotspot-4" data-position="-407.6265799565102m 74.5473041636283m 361.989878003708m"
+            data-normal="-0.6754530454434051m 0.7366898329325986m -0.032423347374529586m"
+            data-visibility-attribute="visible">
+            <span class="Hotspot-dot"></span>
+            <div class="HotspotAnnotation" id="hotspot-4">
+            </div>
+        </button>
+        <button class="Hotspot" slot="hotspot-5"
+            data-position="-338.6656396265608m 42.19374540745709m 364.72082748880416m"
+            data-normal="0.9998595021541614m 0.01641357451501114m -0.0034015472468991908m"
+            data-visibility-attribute="visible">
+            <span class="Hotspot-dot"></span>
+            <div class="HotspotAnnotation" id="hotspot-5">
+            </div>
+        </button>
+        <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+        </div>
+        <button slot="ar-button" id="ar-button">
+            View in your space
+        </button>
+        <div id="ar-prompt">
+            <img src="images/ar_hand_prompt.png">
+        </div>
+    </model-viewer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
