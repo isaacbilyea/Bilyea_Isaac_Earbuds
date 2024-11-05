@@ -21,6 +21,7 @@ Open index.html in the browser of your choice.
 ## History
 
 - October 31st, 2024
+- November 5th, 2024
 
 ## Credits
 
