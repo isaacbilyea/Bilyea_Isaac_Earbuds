@@ -2,18 +2,21 @@
 
   //Variables
   const model = document.querySelector("#model");
-  const hotspotAnnotations = document.querySelectorAll(".HotspotAnnotation");
   const hotspots = document.querySelectorAll(".Hotspot");
+  const hotspotDots = document.querySelectorAll(".Hotspot-dots")
 
   const infoBoxes = [
-      { title: 'Super Fast Charging', text: 'Enjoy rapid charging for minimal downtime and maximum playtime.', image: 'images/fast-charge.svg' },
-      { title: 'Noise-Isolating Tips', text: 'Soft silicone tips to block external noise for immersive audio experiences.', image: 'images/noise-cancelling.svg' },
       { title: 'Secure Fit Wing', text: 'Ergonomic wing design ensures a secure and comfortable fit during any activity.', image: 'images/secure-fit.svg' },
+      { title: 'Multi-Function Button', text: 'One button to control music, calls, and voice assistant functions.', image: 'images/multi-function.svg' },
+      { title: 'Ambient Sound Mode', text: 'Stay aware of your surroundings for safe, focused training without missing a beat.', image: 'images/ambient-sound.svg' },
+      { title: 'Noise-Isolating Tips', text: 'Soft silicone tips to block external noise for immersive audio experiences.', image: 'images/noise-cancelling.svg' },
       { title: 'IPX6 Water Resistant', text: 'Engineered to withstand sweat and rain, perfect for intense workouts.', image: 'images/water-resistant.svg' },
-      { title: 'Multi-Function Button', text: 'One button to control music, calls, and voice assistant functions.', image: 'images/multi-function.svg' }
-  ];
+      { title: 'Super Fast Charging', text: 'Enjoy rapid charging for minimal downtime and maximum playtime.', image: 'images/fast-charge.svg' }
+    ];
 
   //Functions
+
+  //Creates hotspot elements using array content and appends them to hotspot annotation divs
   function loadInfo() {
     infoBoxes.forEach((infoBox, index)=> {
 
@@ -35,17 +38,39 @@
     });
   }
 
+  //Shows hotspot annotation
   function showInfo() {
     let selected = document.querySelector(`#${this.slot}`);
-    gsap.to(selected, 1, { autoAlpha: 1 });
+
+    gsap.fromTo(
+      selected,
+      { autoAlpha: 0, scale: 0.8, y: 20, rotation: -5 },
+      {
+        autoAlpha: 1,
+        scale: 1,
+        rotation: 0,
+        duration: 0.8,
+        ease: "elastic.out(1, 0.5)", 
+      }
+    );
+    //Adds class once hotspot has been hovered to stop animation and change content
     this.classList.add('hovered');
   }
-
+  
+  //Hides hotspot annotation
   function hideInfo() {
     let selected = document.querySelector(`#${this.slot}`);
-    gsap.to(selected, 1, { autoAlpha: 0 });
+
+    gsap.to(selected, {
+      autoAlpha: 0,
+      scale: 0.8,
+      rotation: -5,
+      duration: 0.5,
+      ease: "power1.in",
+    });
   }
   
+  //Loads model first before hotspot content
   function modelLoaded() {
     loadInfo();
   }

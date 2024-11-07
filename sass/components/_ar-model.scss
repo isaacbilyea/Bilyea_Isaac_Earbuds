@@ -19,12 +19,53 @@ model-viewer {
         width: 3rem;
         height: 3rem;
         background-color: transparent;
+        position: relative;
 
         &.hovered .Hotspot-dot {
             animation: none;
             background-color: transparent;
-            background: url(../images/Logo.svg) center no-repeat;
-            background-size: contain;
+            background-color: white;
+            border: 1px solid a.$accent-color;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 4rem;
+            height: 4rem;
+            transition: width 150ms ease-in, height 150ms ease-in;
+            transform: translate(-50%, -50%);
+            position: absolute;
+        }
+
+        &.hovered .Hotspot-dot:after {
+            font-family: a.$heading-font-family;
+            color: a.$accent-color;
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        &.hovered:nth-child(1) .Hotspot-dot::after {
+            content: 'S';
+        }
+          
+        &.hovered:nth-child(2) .Hotspot-dot::after {
+            content: 'T';
+        }
+          
+        &.hovered:nth-child(3) .Hotspot-dot::after {
+            content: 'R';
+        }
+          
+        &.hovered:nth-child(4) .Hotspot-dot::after {
+            content: 'I';
+        }
+          
+        &.hovered:nth-child(5) .Hotspot-dot::after {
+            content: 'D';
+        }
+
+        &.hovered:nth-child(6) .Hotspot-dot::after {
+            content: 'E';
         }
 
         .Hotspot-dot {
@@ -60,10 +101,14 @@ model-viewer {
             pointer-events: none;
         }
           
-        &:focus {
-            animation: none;
-            border: none;
-        }
+        // &:focus {
+        //     animation: none;
+        //     border: none;
+        //     border: 4px solid a.$accent-color;
+        //     height: 1.5rem;
+        //     outline: none;
+        //     width: 1.5rem;
+        // }
         
         .HotspotAnnotation {
             background: #fff;
@@ -71,6 +116,7 @@ model-viewer {
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
             color: a.$primary-color;
             display: block;
+            position: absolute;
             font-size: 1.2rem;
             font-weight: 700;
             left: calc(100% + 1em);
