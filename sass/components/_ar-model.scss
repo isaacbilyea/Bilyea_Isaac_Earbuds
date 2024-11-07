@@ -22,19 +22,19 @@ model-viewer {
         position: relative;
 
         &.hovered .Hotspot-dot {
-            animation: none;
-            background-color: transparent;
+            position: absolute;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            width: 4rem;
+            height: 4rem;
             background-color: white;
-            border: 1px solid a.$accent-color;
+            border: 2px solid a.$accent-color;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 4rem;
-            height: 4rem;
             transition: width 150ms ease-in, height 150ms ease-in;
-            transform: translate(-50%, -50%);
-            position: absolute;
+            animation: none;
         }
 
         &.hovered .Hotspot-dot:after {
@@ -124,7 +124,7 @@ model-viewer {
             overflow-wrap: break-word;
             padding: 0.5em 1em;
             position: absolute;
-            bottom: -450%;
+            bottom: -400%;
             width: max-content;
             visibility: hidden;
             z-index: 10;
