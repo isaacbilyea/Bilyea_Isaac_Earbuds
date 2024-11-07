@@ -2,8 +2,7 @@
 
   //Variables
   const model = document.querySelector("#model");
-  const hotspots = document.querySelectorAll(".Hotspot");
-  const hotspotDots = document.querySelectorAll(".Hotspot-dots")
+  const hotspotDots = document.querySelectorAll(".Hotspot-dot");
 
   const infoBoxes = [
       { title: 'Secure Fit Wing', text: 'Ergonomic wing design ensures a secure and comfortable fit during any activity.', image: 'images/secure-fit.svg' },
@@ -40,26 +39,25 @@
 
   //Shows hotspot annotation
   function showInfo() {
-    let selected = document.querySelector(`#${this.slot}`);
 
-    gsap.fromTo(
-      selected,
-      { autoAlpha: 0, scale: 0.8, y: 20, rotation: -5 },
-      {
-        autoAlpha: 1,
-        scale: 1,
-        rotation: 0,
-        duration: 0.8,
-        ease: "elastic.out(1, 0.5)", 
-      }
-    );
+    //I changed the selector as I prefered to have the hover functionality only on the hotspot dots
+    const parent = this.parentElement;
+    const slotName = parent.slot;
+    const selected = document.querySelector(`#${slotName}`);
+
+    gsap.set(selected, {autoAlpha: 0, scale: 0.8, y: 20, rotation: -5 });
+    gsap.to(selected, {autoAlpha: 1, scale: 1, rotation: 0, duration: 0.8, ease: "elastic.out(1, 0.5)"});
+
     //Adds class once hotspot has been hovered to stop animation and change content
-    this.classList.add('hovered');
+    parent.classList.add('hovered');
   }
   
   //Hides hotspot annotation
   function hideInfo() {
-    let selected = document.querySelector(`#${this.slot}`);
+
+    const parent = this.parentElement;
+    const slotName = parent.slot;
+    const selected = document.querySelector(`#${slotName}`);
 
     gsap.to(selected, {
       autoAlpha: 0,
@@ -78,7 +76,7 @@
   //Event Listeners
   model.addEventListener("load", modelLoaded);
 
-  hotspots.forEach(function (hotspot) {
+  hotspotDots.forEach(function (hotspot) {
       hotspot.addEventListener("mouseenter", showInfo);
       hotspot.addEventListener("mouseleave", hideInfo);
   });
