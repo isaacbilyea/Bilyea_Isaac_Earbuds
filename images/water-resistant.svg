@@ -1,6 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg fill="#AFAA47" width="800px" height="800px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
-<title>water-drop</title>
-<path d="M25.378 19.75c1.507 6.027-3.162 11.25-9.375 11.25s-10.9-5.149-9.375-11.25c0.937-3.75 5.625-9.375 9.375-18.75 3.75 9.374 8.438 15 9.375 18.75z"></path>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.12 750">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #afaa47;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <path class="cls-1" d="M476,468.75c37.67,150.68-79.05,281.25-234.38,281.25S-30.87,621.27,7.25,468.75C30.68,375,147.88,234.38,241.63,0c93.75,234.35,210.95,375,234.38,468.75Z"/>
+  </g>
 </svg>

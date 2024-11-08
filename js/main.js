@@ -64,16 +64,17 @@
       scale: 0.8,
       rotation: -5,
       duration: 0.5,
-      ease: "power1.in",
+      ease: "power1.out",
     });
   }
   
-  //Loads model first before hotspot content
+  //Loads model first before hotspot content (only on tablet and )
   function modelLoaded() {
-    loadInfo();
+      loadInfo();
   }
 
   //Event Listeners
+
   model.addEventListener("load", modelLoaded);
 
   hotspotDots.forEach(function (hotspot) {
