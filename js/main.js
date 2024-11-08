@@ -42,10 +42,9 @@
 
     //I changed the selector as I prefered to have the hover functionality only on the hotspot dots
     const parent = this.parentElement;
-    const slotName = parent.slot;
-    const selected = document.querySelector(`#${slotName}`);
+    const selected = document.querySelector(`#${parent.slot}`);
 
-    gsap.set(selected, {autoAlpha: 0, scale: 0.8, rotation: -5 });
+    gsap.set(selected, {autoAlpha: 0, scale: 0.6, rotation: -5 });
     gsap.to(selected, {autoAlpha: 1, scale: 1, rotation: 0, duration: 0.8, ease: "elastic.out(1, 0.5)"});
 
     //Adds class once hotspot has been hovered to stop animation and change content
@@ -56,16 +55,9 @@
   function hideInfo() {
 
     const parent = this.parentElement;
-    const slotName = parent.slot;
-    const selected = document.querySelector(`#${slotName}`);
+    const selected = document.querySelector(`#${parent.slot}`);
 
-    gsap.to(selected, {
-      autoAlpha: 0,
-      scale: 0.8,
-      rotation: -5,
-      duration: 0.5,
-      ease: "power1.out",
-    });
+    gsap.to(selected, {autoAlpha: 0, scale: 0.8, rotation: -5, duration: 0.3, ease: "power3.in"});
   }
   
   //Loads model first before hotspot content (only on tablet and )
