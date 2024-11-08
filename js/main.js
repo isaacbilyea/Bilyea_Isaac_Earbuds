@@ -45,7 +45,7 @@
     const slotName = parent.slot;
     const selected = document.querySelector(`#${slotName}`);
 
-    gsap.set(selected, {autoAlpha: 0, scale: 0.8, y: 20, rotation: -5 });
+    gsap.set(selected, {autoAlpha: 0, scale: 0.8, rotation: -5 });
     gsap.to(selected, {autoAlpha: 1, scale: 1, rotation: 0, duration: 0.8, ease: "elastic.out(1, 0.5)"});
 
     //Adds class once hotspot has been hovered to stop animation and change content
