@@ -11,6 +11,7 @@ model-viewer {
     align-items: center;
     flex-direction: column;
     color: a.$primary-color;
+    padding-bottom: 3rem;
 
     #mobile-earbud {
         background-color: #fff;
@@ -29,9 +30,10 @@ model-viewer {
         text-align: left;
         width: 90%;
         padding: 2rem;
+        height: 10rem;
 
         img {
-            width: 5rem;
+            width: 3rem;
         }
 
         h2 {
@@ -62,9 +64,6 @@ model-viewer {
 
     #mobile-info {
     
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1rem;
@@ -76,26 +75,17 @@ model-viewer {
         display: none;
     }
 
-
     .info-card {
-        background-color: #fff;
-        border: 3px solid a.$accent-color;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        margin-top: 2rem;
-        text-align: left;
+
         width: 47%;
-        padding: 5rem;
         height: 10rem;
+        border: 5px solid a.$accent-color;
 
         img {
             height: 4.5rem;
         }
 
         h2 {
-            margin: 0;
             margin-left: 2rem;
             font-size: 1.25rem;
         }
