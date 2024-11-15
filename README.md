@@ -15,6 +15,7 @@ Open index.html in the browser of your choice.
 - October 31st, 2024
 - November 5th, 2024
 - November 7th, 2024
+- November 15th, 2024
 
 ## Credits
 
