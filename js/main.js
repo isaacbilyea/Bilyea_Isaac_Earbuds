@@ -1,6 +1,104 @@
+//Hamburger Menu
 (() => {
 
-  //Variables
+  //VARIABLES
+
+  const hamburgerMenu = document.querySelector('#hamburger-menu');
+  const mainNav = document.querySelector('#main-nav');
+  const body = document.querySelector('body');
+
+  //FUNCTIONS
+
+  //Toggles classes for showing/hiding mobile menu stuff
+  function toggleMenu() {
+    hamburgerMenu.classList.toggle('activate');
+    mainNav.classList.toggle('show');
+    body.classList.toggle('menu-open'); //Used to set body to hide overflow when menu is open
+  };
+
+  //EVENT LISTENERS
+
+  hamburgerMenu.addEventListener('click', toggleMenu);
+
+})();
+
+//Earbuds Scrub
+(() => {
+
+  const canvas = document.querySelector('#explode-view');
+  const context = canvas.getContext('2d');
+
+  function setCanvasSize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerWidth * 9 / 16; // Maintain 16:9 aspect ratio
+  }
+
+  setCanvasSize(); // Initial size setup
+  window.addEventListener('resize', setCanvasSize); // Adjust canvas on resize
+
+  const frameCount = 280; //How many still frames
+
+  const images = []; //Array to hold images
+
+  //Fill the array with images and point to the images
+
+  for(let i = 0; i < frameCount; i++) {
+      const img = new Image();
+      img.src = `images/earbud_${((i+1).toString().padStart(5, '0'))}.png`;
+      images.push(img);
+  }
+
+  const buds = {
+      frame: 0
+  }
+
+  gsap.to(buds, {
+      frame: 279,
+      snap: "frame",
+      scrollTrigger: {
+          trigger: "#explode-view",
+          pin: true,
+          scrub: 1,
+          markers: true,
+          start: "top top",
+          end: "500% top"
+      },
+      onUpdate: render
+
+  })
+
+  images[0].addEventListener('load', render)
+
+  function render() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.drawImage(images[buds.frame], 0, 0, canvas.width, canvas.height); // Scale image to fit canvas
+  }
+
+})();
+
+//X-Ray Slider
+(() => {
+
+  //VARIABLES
+  const divisor = document.querySelector('#divisor');
+  const slider = document.querySelector('#slider');
+
+  //FUNCTIONS
+
+  function moveDivisor() {
+    divisor.style.width = `${slider.value}%`;
+  }
+
+  //EVENT LISTENERS
+  slider.addEventListener('input', moveDivisor);
+
+})();
+
+//Model Viewer
+(() => {
+
+  //VARIABLES
+
   const model = document.querySelector("#model");
   const hotspotDots = document.querySelectorAll(".Hotspot-dot");
 
@@ -13,7 +111,7 @@
       { title: 'Super Fast Charging', text: 'Enjoy rapid charging for minimal downtime and maximum playtime.', image: 'images/fast-charge.svg' }
     ];
 
-  //Functions
+  //FUNCTIONS
 
   //Creates hotspot elements using array content and appends them to hotspot annotation divs
   function loadInfo() {
@@ -65,7 +163,7 @@
       loadInfo();
   }
 
-  //Event Listeners
+  //EVENT LISTENERS
 
   model.addEventListener("load", modelLoaded);
 

@@ -47,12 +47,10 @@ model-viewer {
 
     model-viewer {
         display: block;
-        width: 90%;
-        max-width: 1200px;
-        height: 700px;
+        width: 80vw;
+        height: 80vh;
         background-color: #fff;
         margin: 0 auto;
-        border: 5px solid a.$accent-color;
         margin-bottom: 1rem;
         padding: 2rem;
         padding-left: 4rem;
@@ -100,7 +98,6 @@ model-viewer {
     }
 
     model-viewer {
-        width: auto;
         padding: 0;
         margin-bottom: 5rem;
     

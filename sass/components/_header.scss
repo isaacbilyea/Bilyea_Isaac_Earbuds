@@ -1,34 +1,275 @@
-@use '../abstracts' as a;
+@use "../abstracts" as a;
 
-header {
+#main-header {
+  padding: 1rem 2rem;
+  position: relative;
+  margin: 0;
+  background-color: a.$accent-color;
 
-    background-color: a.$primary-color;
-    text-align: center;
-
-    h1 {
-        color: a.$accent-color;
-        font-size: 3rem;
+  a {
+    text-decoration: none;
+    margin: 0;
+        h1 {
+            color: white;
+            margin: 0;
+        }
     }
+
+  #hamburger-menu {
+    cursor: pointer;
+    width: 1.75rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 1.75rem;
+    right: 3rem;
+    z-index: 5;
+
+    div {
+      width: 100%;
+      height: 0.25rem;
+      background-color: white;
+      position: absolute;
+      transition: 0.3s ease;
+      border-radius: 1rem;
+    }
+
+    #line1 {
+      margin: 0;
+      left: 25%;
+    }
+
+    #line2 {
+      width: 2.5rem;
+      margin-top: 0.625rem;
+      transform-origin: center;
+      transform: scaleX(1);
+    }
+
+    #line3 {
+      margin-top: 1.25rem;
+      left: 25%;
+    }
+
+    &.activate #line1 {
+      transform: rotate(45deg) translate(0.4375rem, 0.4375rem);
+      width: 2.5rem;
+      left: 0;
+      background-color: white;
+    }
+
+    &.activate #line2 {
+      transform: scaleX(0);
+      opacity: 0;
+      transition: 0.2s ease-in-out;
+      background-color: white;
+    }
+
+    &.activate #line3 {
+      transform: rotate(-45deg) translate(0.4375rem, -0.4375rem);
+      width: 2.5rem;
+      left: 0;
+      background-color: white;
+    }
+  }
+
+  #main-nav {
+    display: none;
+    animation: slideInTop 300ms ease-in-out;
+    height: 100vh;
+    position: fixed;
+    background-color: a.$accent-color;
+    z-index: 4;
+    top: 5rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    &::before {
+      content: url(../images/logo-white.svg);
+      animation: slideInLeft 600ms ease-in-out;
+      position: absolute;
+      bottom: -20%;
+      left: -30%;
+      width: 30rem;
+      height: 30rem;
+      z-index: -1;
+    }
+
+
+    &.show {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 10rem;
+      text-align: center;
+
+      .menu-item {
+        animation: fadeIn 0.5s ease-in-out forwards;
+        opacity: 0;
+
+        &:nth-of-type(1) {
+          animation-delay: 0.2s;
+        }
+
+        &:nth-of-type(2) {
+          animation-delay: 0.3s;
+        }
+
+        &:nth-of-type(3) {
+          animation-delay: 0.4s;
+        }
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin: 1rem;
+      position: relative;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 2rem;
+      font-family: a.$heading-font-family;
+    }
+
+    @keyframes slideInTop {
+
+      0% {
+        height: 2rem;
+      }
+
+      100% {
+        height: 100%;
+      }
+    }
+
+    @keyframes slideInLeft {
+
+      0% {
+        left: -40%;
+        bottom: -20%;
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 0;
+      }
+
+      100% {
+        left: -30%;
+        bottom: -20%;
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
 
-    header {
+  #main-header {
 
-        h1 {
-            font-size: 5rem;
+    #main-nav {
+  
+      &::before {
+        bottom: -15%;
+        left: -20%;
+        width: 40rem;
+        height: 40rem;
+      }
+
+      &.show {
+        padding-top: 12rem;
+      }
+
+      @keyframes slideInLeft {
+
+        0% {
+          left: -30%;
+          bottom: -15%;
+          opacity: 0;
         }
-    }
+  
+        50% {
+          opacity: 0;
+        }
+  
+        100% {
+          left: -20%;
+          bottom: -15%;
+          opacity: 1;
+        }
+      }
 
+      a {
+        font-size: 2.5rem;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1200px) {
+  #main-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 
-    header {
-
-        h1 {
-            font-size: 6rem;
-        }
+    #hamburger-menu {
+      display: none;
     }
 
+    #main-nav {
+      display: block;
+      position: unset;
+      height: auto;
+      background-color: transparent;
+      border-left: none;
+      animation: none;
+
+      &.show {
+        display: block;
+      }
+
+      ul {
+        flex-direction: row;
+      }
+
+      li {
+        margin: 0rem;
+        margin-left: 4rem;
+      }
+
+      a {
+        font-size: 1.25rem;
+        display: block;
+        color: white;
+      }
+
+      .menu-item {
+        animation: none;
+        opacity: 1;
+        font-weight: 600;
+      }
+
+    }
+  }
 }

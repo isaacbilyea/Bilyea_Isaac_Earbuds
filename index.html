@@ -9,11 +9,33 @@
     <link href="css/main.css" rel="stylesheet">
     <title>Stride Earbuds</title>
 </head>
-<header>
-    <h1>STRIDE</h1>
+<header id="main-header">
+    <a href="index.html">
+        <h1>STRIDE</h1>
+    </a>
+
+    <div id="hamburger-menu">
+        <div id="line1"></div>
+        <div id="line2"></div>
+        <div id="line3"></div>
+    </div>
+
+    <nav id="main-nav">
+        <h2 class="hidden">Main Navigation</h2>
+        <ul>
+            <li class="menu-item"><a href="index.html">Shop</a></li>
+            <li class="menu-item"><a href="index.html">Discover</a></li>
+            <li class="menu-item"><a href="index.html">Support</a></li>
+        </ul>
+    </nav>
 </header>
 
 <body>
+
+    <div class="col-span-full">
+        <canvas id="explode-view"></canvas>
+    </div>
+
     <model-viewer id="model" src="model/Bilyea_Isaac_Earbuds.gltf" ar ar-modes="webxr scene-viewer quick-look"
         camera-controls tone-mapping="neutral" poster="images/poster.webp" shadow-intensity="1.75" shadow-softness="1"
         exposure="0.75" environment-image="images/studio_small_09_4k.hdr" camera-orbit="73.86deg 82.57deg 351.6m"
@@ -106,7 +128,22 @@
         </div>
     </section>
 
+    <div class="col-span-full">
+        <section id="mobile-tablet-view">
+            <img src="images/earbud.png" alt="regular view of earbuds">
+            <img src="images/earbud-xray.png" alt="x-ray view of earbuds">
+        </section>
+        <div id="comparison-con">
+            <div id="xray">
+                <div id="divisor"></div>
+                <input type="range" min="0" max="100" value="50" id="slider">
+            </div>
+        </div>
+
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
     <script src="js/main.js"></script>
 </body>
