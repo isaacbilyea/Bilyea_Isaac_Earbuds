@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.typekit.net/bhw3oux.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <title>Stride Earbuds</title>
@@ -31,6 +32,26 @@
 </header>
 
 <body>
+
+    <section id="hero-con" class="grid-con">
+        <div id="hero-image" class="col-span-full">
+            <img src="images/earbuds-hero.png" alt="image of earbuds with case">
+        </div>
+        <div id="hero-text" class="col-span-full">
+            <h2>STRIDE</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's.
+            </p>
+            <button>SHOP NOW</button>
+        </div>
+    </section>
+
+    <div class="col-span-full" id="video-con">
+        <video class="player" preload="metadata" poster="images/video-poster.png">
+            <source src="videos/test.mp4" type="video/mp4">
+            <p>Oops, something went wrong. You may be using an outdated browser or have javascript disabled.</p>
+        </video>
+    </div>
 
     <div class="col-span-full">
         <canvas id="explode-view"></canvas>
@@ -183,7 +204,7 @@
                 <img src="images/fast-charge.svg" alt="fast charge icon">
             </div>
             <div class="info-card-text">
-                <h2>SUPER FAST CHARGING</h2>
+                <h3>SUPER FAST CHARGING</h3>
                 <p>Enjoy rapid charging for minimal downtime and maximum playtime.</p>
             </div>
         </div>
@@ -206,6 +227,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
     <script src="js/main.js"></script>
 </body>
 

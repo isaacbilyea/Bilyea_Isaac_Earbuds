@@ -1,5 +1,65 @@
 @use "../abstracts" as a;
 
+
+#hero-con {
+
+    margin: 3rem 0;
+
+    #hero-image {
+        width: 90vw;
+    }
+
+    #hero-text {
+
+        text-align: center;
+        color: a.$secondary-color;
+
+        h2 {
+            font-family: a.$alt-heading-font-family;
+            font-size: 10vw;
+            margin: 0;
+        }
+
+        p {
+            width: 80vw;
+            margin: 1rem auto;
+            font-size: 1.25rem;
+        }
+
+        button {
+            border: none;
+            color: a.$secondary-color;
+            font-weight: 900;
+            font-family: a.$body-font-family;
+            border: 3px solid a.$secondary-color;
+            padding: 1rem;
+            width: 80vw;
+            background-color: transparent;
+            font-size: 1.5rem;
+            border-radius: 0 0 1rem 1rem;
+        }
+    }
+}
+
+#video-con {
+    border-radius: 1rem;
+    border: 3px solid a.$secondary-color;
+    overflow: hidden;
+    width: 80vw;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+.plyr--video {
+    --plyr-color-main: #2d2d2d;
+    --plyr-control-icon-size: 1rem;
+    --plyr-control-radius: 1.25rem;
+    --plyr-font-family: 'Metropolis', Arial, serif;
+    --plyr-control-spacing: 1rem;
+    --plyr-range-fill-background: #fff;
+    --plyr-range-thumb-background: #AFAA47;
+}
+
 .section-heading {
     text-align: center;
     font-size: 10vw;
@@ -7,4 +67,44 @@
     margin: 0;
     margin-bottom: .5rem;
     color: a.$secondary-color;
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    #hero-con {
+        display: flex;
+        margin: 5rem auto;
+        justify-content: center;
+        align-items: center;
+
+        #hero-image {
+            width: auto;
+            transform: scale(1.4);
+            margin-top: 2rem;
+        }
+
+        #hero-text {
+            
+            margin-right: 2rem;
+
+            h2 {
+                width: auto;
+                font-size: 4rem;
+            }
+
+            p {
+                width: auto;
+            }
+
+            button {
+                width: auto;
+                padding: 1rem 7rem;
+            }
+        }
+    }
+
 }
