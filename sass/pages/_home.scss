@@ -1,3 +1,10 @@
-#explode-view {
+@use "../abstracts" as a;
+
+.section-heading {
+    text-align: center;
+    font-size: 10vw;
+    font-weight: 900;
     margin: 0;
+    margin-bottom: .5rem;
+    color: a.$secondary-color;
 }

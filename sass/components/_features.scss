@@ -4,14 +4,6 @@
 
     margin-bottom: 1rem;
 
-    #info-cards-heading {
-        text-align: center;
-        font-size: 10vw;
-        font-weight: 900;
-        margin: 0;
-        margin-bottom: .5rem;
-    }
-
     .info-card {
 
         display: flex;
@@ -93,7 +85,7 @@
                 width: 100%; 
             }
 
-            h2 {
+            h3 {
                 width: 80%;
                 margin: .75rem 0 0 1.25rem;
                 font-size: 1.25rem;
@@ -149,7 +141,7 @@
 
             .info-card-text {
 
-                h2 {
+                h3 {
                     margin: 1rem 0 0 1.5rem;
                     font-size: 1.4rem;
                 }
@@ -195,7 +187,7 @@
 
             .info-card-text {
 
-                h2 {
+                h3 {
                     margin: 1rem 0 0 1.5rem;
                     font-size: 2.25rem;
                 }

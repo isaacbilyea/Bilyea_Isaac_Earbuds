@@ -43,6 +43,8 @@ model-viewer {
     model-viewer {
         padding: 0;
         margin-bottom: 5rem;
+        border-radius: 1rem;
+        border: 5px solid a.$secondary-color;
     
         .Hotspot {
             display: block;
@@ -69,7 +71,7 @@ model-viewer {
             }
     
             &.hovered .Hotspot-dot:after {
-                font-family: a.$heading-font-family;
+                font-family: a.$alt-heading-font-family;
                 color: a.$accent-color;
                 font-size: 2rem;
                 margin: 0;
@@ -189,10 +191,10 @@ model-viewer {
             }
             
             .HotspotAnnotation {
-                background: #fff;
+                background: a.$secondary-color;
                 border-radius: 4px;
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-                color: a.$primary-color;
+                color: white;
                 display: block;
                 position: absolute;
                 font-size: 1.2rem;
@@ -208,7 +210,7 @@ model-viewer {
                 border: 3px solid a.$accent-color;
     
                 p {
-                    color: a.$primary-color;
+                    color: white;
                     line-height: 1.2;
                     font-weight: 300;
                     padding: 0 1rem;
