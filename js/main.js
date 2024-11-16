@@ -5,20 +5,32 @@
 
   const hamburgerMenu = document.querySelector('#hamburger-menu');
   const mainNav = document.querySelector('#main-nav');
-  const body = document.querySelector('body');
+  const header = document.querySelector('#main-header');
+  
 
   //FUNCTIONS
 
-  //Toggles classes for showing/hiding mobile menu stuff
+  // Toggles classes for showing/hiding mobile menu stuff
   function toggleMenu() {
-    hamburgerMenu.classList.toggle('activate');
-    mainNav.classList.toggle('show');
-    body.classList.toggle('menu-open'); //Used to set body to hide overflow when menu is open
-  };
+    if (window.innerWidth < 1200) {
+      hamburgerMenu.classList.toggle('activate');
+      mainNav.classList.toggle('show');
+      header.classList.toggle('menu-open');
+    }
+  }
 
-  //EVENT LISTENERS
+  // Resets the menu for large screens
+  function hideMenu() {
+    if (window.innerWidth >= 1200) {
+      hamburgerMenu.classList.remove('activate');
+      mainNav.classList.remove('show');
+      header.classList.remove('menu-open');
+    }
+  }
 
+  // EVENT LISTENERS
   hamburgerMenu.addEventListener('click', toggleMenu);
+  window.addEventListener('resize',hideMenu);
 
 })();
 
