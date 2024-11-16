@@ -4,44 +4,12 @@ model-viewer {
     display: none;
 }
 
-#mobile-info {
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: a.$primary-color;
-    padding-bottom: 3rem;
-
-    #mobile-earbud {
-        background-color: #fff;
-        width: 90%;
-        border: 3px solid a.$accent-color;
-    }
-
-    .info-card {
-        background-color: #fff;
-        border: 3px solid a.$accent-color;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        margin-top: 2rem;
-        text-align: left;
-        width: 90%;
-        padding: 2rem;
-        height: 10rem;
-
-        img {
-            width: 3rem;
-        }
-
-        h2 {
-            margin: 0;
-            margin-left: 4rem;
-        }
-    }
+#mobile-earbud {
+    background-color: #fff;
+    width: 90%;
+    border: 3px solid a.$accent-color;
 }
+
 
 @media screen and (min-width: 768px) {
 
@@ -60,35 +28,10 @@ model-viewer {
         display: none;
     }
 
-    #mobile-info {
-    
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: space-between;
-    width: 90%;
-    margin: 0 auto;
-
     #mobile-earbud {
         display: none;
     }
 
-    .info-card {
-
-        width: 47%;
-        height: 10rem;
-        border: 5px solid a.$accent-color;
-
-        img {
-            height: 4.5rem;
-        }
-
-        h2 {
-            margin-left: 2rem;
-            font-size: 1.25rem;
-        }
-    }
-}
 }
 
 @media screen and (min-width: 1200px) {

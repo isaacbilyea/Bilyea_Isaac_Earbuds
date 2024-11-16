@@ -76,24 +76,6 @@
 
 })();
 
-//X-Ray Slider
-(() => {
-
-  //VARIABLES
-  const divisor = document.querySelector('#divisor');
-  const slider = document.querySelector('#slider');
-
-  //FUNCTIONS
-
-  function moveDivisor() {
-    divisor.style.width = `${slider.value}%`;
-  }
-
-  //EVENT LISTENERS
-  slider.addEventListener('input', moveDivisor);
-
-})();
-
 //Model Viewer
 (() => {
 
@@ -171,5 +153,51 @@
       hotspot.addEventListener("mouseenter", showInfo);
       hotspot.addEventListener("mouseleave", hideInfo);
   });
+
+//Features
+(() => {
+
+  //VARIABLES
+  const infoCardImage = document.querySelectorAll('.info-card-image');
+  const infoCardText = document.querySelectorAll('.info-card-text');
+
+
+  //FUNCTIONS
+  function toggleInfoText(event) {
+    const clickedElement = event.target.closest('.info-card-image');
+    
+    infoCardImage.forEach((image, index) => {
+        if (image === clickedElement) {
+            infoCardText[index].classList.toggle('show');
+            image.classList.toggle('active');  // Add this line
+        }
+    });
+  }
+
+  //EVENT LISTENERS
+
+  infoCardImage.forEach(image => {
+    image.addEventListener('click', toggleInfoText);
+  }); 
+
+})();
+
+})();
+
+//X-Ray Slider
+(() => {
+
+  //VARIABLES
+  const divisor = document.querySelector('#divisor');
+  const slider = document.querySelector('#slider');
+
+  //FUNCTIONS
+
+  function moveDivisor() {
+    divisor.style.width = `${slider.value}%`;
+  }
+
+  //EVENT LISTENERS
+  slider.addEventListener('input', moveDivisor);
 
 })();
