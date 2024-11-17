@@ -7,7 +7,7 @@
   border: 5px solid a.$secondary-color;
   border-top: none;
   border-radius: 0 0 1rem 1rem;
-  width: 90vw;
+  width: calc(90vw - 10px);
   height: 5rem;
   transition: height 300ms ease;
 

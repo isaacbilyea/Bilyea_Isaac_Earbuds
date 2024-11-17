@@ -7,6 +7,7 @@
   h2 {
     color: white;
     padding: 0 0 1rem 0;
+    font-size: 3.5rem;
   }
 
   #mobile-tablet-view img {
@@ -23,6 +24,11 @@
   #xray-con {
     padding: 3rem;
 
+    h2 {
+      font-size: 6rem;
+    }
+  
+
     #mobile-tablet-view {
       display: none;
     }
@@ -33,52 +39,65 @@
       margin: 0 auto;
     }
 
-    #xray {
-        position: relative;
-        aspect-ratio: 16/9;
-        background-image: url(../images/earbud.png);
-        background-size: cover;
-        border-radius: 1rem;
-    }
 
-    #divisor {
-        position: absolute;
-        top: 0;
-        left: 0;
-        aspect-ratio: 16/9;
-        background-image: url(../images/earbud-xray.png);
-        background-size: cover;
-        width: 50%;
-        height: 100%;
-        border-radius: 1rem;
+    #xray {
+      position: relative;
+      aspect-ratio: 16/9;
+      background-image: url(../images/earbud.png);
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      border-radius: 1rem;
+  }
+
+  #divisor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    aspect-ratio: 16/9;
+    background-image: url(../images/earbud-xray.png);
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+    border-radius: 1rem;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      right: 1px;
+      width: 4px;
+      height: 100%;
+      background: #fff;
+      border-radius: 1rem;
+
+    }
+      
     }
 
     input[type=range] {
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
-      position: relative;
-      top: -18px;
-      left: -2%;
-      background-color: rgba(255, 255, 255, 0.1);
-      width: 102%;
+      position: absolute;
+      left: -15px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: calc(100% + 20px);
+      height: 20px;
+      z-index: 10;
+      background: transparent;
     }
 
-    input[type=range]:focus {
-      outline: none;
+    input[type=range]::-webkit-slider-runnable-track {
+      height: 0;
+      background: transparent;
+      border: none;
     }
 
     input[type=range]::-moz-range-track {
-      height: 15px;
-      width: 98%;
-      background-color: rgba(255, 255, 255, 0.1);
-      position: relative;
-      outline: none;
-    }
-
-    input[type=range]::active {
+      height: 0;
+      background: transparent;
       border: none;
-      outline: none;
     }
 
     input[type=range]::-webkit-slider-thumb {
@@ -86,27 +105,27 @@
       appearance: none;
       width: 20px;
       height: 20px;
-      background: #AFAA47;
+      background: #fff;
       border-radius: 50%;
       border: none;
+      cursor: pointer;
     }
 
     input[type=range]::-moz-range-thumb {
-      -moz-appearance: none;
-      appearance: none;
       width: 20px;
       height: 20px;
-      background: #AFAA47;
+      background: #fff;
       border-radius: 50%;
       border: none;
+      cursor: pointer;
     }
 
     input[type=range]:focus::-webkit-slider-thumb {
-      background: rgba(175, 170, 71, 0.5);
+      background: #fff;
     }
 
     input[type=range]:focus::-moz-range-thumb {
-      background: rgba(175, 170, 71, 0.5);
+      background: #fff;
     }
   }
 }

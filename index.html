@@ -53,11 +53,14 @@
         </video>
     </div>
 
-    <div class="col-span-full">
+    <div id="explode-view-con" class="col-span-full">
         <canvas id="explode-view"></canvas>
     </div>
 
     <h2 id="model-viewer-heading" class="section-heading col-span-full">EXPLORE</h2>
+    <p id="mobile-sub-heading" class="section-sub-heading col-span-full">VIEW ON TABLET OR DESKTOP FOR A
+        3D EXPERIENCE</p>
+    <p id="tablet-sub-heading" class="section-sub-heading col-span-full">SWIPE TO INTERACT WITH OUR 3D MODEL</p>
 
     <model-viewer id="model" src="model/Bilyea_Isaac_Earbuds.gltf" ar ar-modes="webxr scene-viewer quick-look"
         camera-controls tone-mapping="neutral" poster="images/poster.webp" shadow-intensity="1.75" shadow-softness="1"
@@ -127,9 +130,12 @@
         <img src="images/poster.webp" alt="image of earbud">
     </div>
 
+    <div id="line-seperator"></div>
+
     <section id="info-cards" class="grid-con">
 
         <h2 id="info-cards-heading" class="section-heading col-span-full">FEATURES</h2>
+        <p class="section-sub-heading col-span-full">CLICK EACH ICON TO LEARN MORE</p>
 
         <div class="info-card col-span-full">
             <div class="info-card-text">
@@ -238,9 +244,6 @@
                     <img src="images/sm-facebook.svg" alt="facebook-logo">
                 </div>
             </nav>
-            <div id="to-top">
-                <a href="index.html">BACK TO TOP</a>
-            </div>
         </div>
     </footer>
 
