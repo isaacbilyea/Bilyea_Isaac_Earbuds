@@ -114,12 +114,12 @@ const player = new Plyr('video', {
   const hotspotDots = document.querySelectorAll(".Hotspot-dot");
 
   const infoBoxes = [
-      { title: 'Secure Fit Wing', text: 'Ergonomic wing design ensures a secure and comfortable fit during any activity.', image: 'images/secure-fit.svg' },
-      { title: 'Multi-Function Button', text: 'One button to control music, calls, and voice assistant functions.', image: 'images/multi-function.svg' },
-      { title: 'Ambient Sound Mode', text: 'Stay aware of your surroundings for safe, focused training without missing a beat.', image: 'images/ambient-sound.svg' },
-      { title: 'Noise-Isolating Tips', text: 'Soft silicone tips to block external noise for immersive audio experiences.', image: 'images/noise-cancelling.svg' },
-      { title: 'IPX6 Water Resistant', text: 'Engineered to withstand sweat and rain, perfect for intense workouts.', image: 'images/water-resistant.svg' },
-      { title: 'Super Fast Charging', text: 'Enjoy rapid charging for minimal downtime and maximum playtime.', image: 'images/fast-charge.svg' }
+      { title: 'SECURE FIT WING', text: 'Ergonomic wing design ensures a secure and comfortable fit during any activity.', image: 'images/secure-fit.svg' },
+      { title: 'MULTI-FUNCTION BUTTON', text: 'One button to control music, calls, and voice assistant functions.', image: 'images/multi-function.svg' },
+      { title: 'AMBIENT SOUND MODE', text: 'Stay aware of your surroundings for safe, focused training without missing a beat.', image: 'images/ambient-sound.svg' },
+      { title: 'NOISE-ISOLATING TIPS', text: 'Soft silicone tips to block external noise for immersive audio experiences.', image: 'images/noise-cancelling.svg' },
+      { title: 'IPX6 WATER RESISTANT', text: 'Engineered to withstand sweat and rain, perfect for intense workouts.', image: 'images/water-resistant.svg' },
+      { title: 'SUPER FAST CHARGING', text: 'Enjoy rapid charging for minimal downtime and maximum playtime.', image: 'images/fast-charge.svg' }
     ];
 
   //FUNCTIONS
@@ -130,18 +130,29 @@ const player = new Plyr('video', {
 
       let selected = document.querySelector(`#hotspot-${index+1}`);
 
-      hotspotTitle = document.createElement('h2');
-      hotspotTitle.textContent = infoBox.title;
+      // hotspotTitle = document.createElement('h2');
+      // hotspotTitle.textContent = infoBox.title;
 
-      hotspotText = document.createElement('p');
-      hotspotText.textContent = infoBox.text;
+      // hotspotText = document.createElement('p');
+      // hotspotText.textContent = infoBox.text;
 
-      hotspotImage = document.createElement('img');
-      hotspotImage.src = infoBox.image;
+      // hotspotImage = document.createElement('img');
+      // hotspotImage.src = infoBox.image;
 
-      selected.appendChild(hotspotImage);
-      selected.appendChild(hotspotTitle);
-      selected.appendChild(hotspotText);
+      // selected.appendChild(hotspotImage);
+      // selected.appendChild(hotspotTitle);
+      // selected.appendChild(hotspotText);
+
+      selected.innerHTML = 
+      `
+          <div class="info-card-image">
+              <img src="${infoBox.image}" alt="feature icon">
+          </div>
+          <div class="info-card-text">
+              <h3>${infoBox.title}</h3>
+              <p>${infoBox.text}</p>
+          </div>
+      `
 
     });
   }
