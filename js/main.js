@@ -192,7 +192,7 @@ const player = new Plyr('video', {
   hotspotDots.forEach(function (hotspot) {
       hotspot.addEventListener("mouseenter", showInfo);
       hotspot.addEventListener("mouseleave", hideInfo);
-  });
+});
 
 //Features
 (() => {
