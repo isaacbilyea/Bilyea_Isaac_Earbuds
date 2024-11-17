@@ -189,43 +189,123 @@ model-viewer {
             &:focus:nth-child(6) .Hotspot-dot::after {
                 content: 'E';
             }
-            
+
+            &:nth-child(even) .info-card-image {
+                background-color: a.$accent-color;
+            }
+
+            &:nth-child(odd) .info-card-image {
+                background-color: a.$secondary-color;
+            }
+
+            &:nth-of-type(even) .info-card-text {
+                background-color: a.$accent-color;
+            }
+    
+            &:nth-of-type(odd) .info-card-text {
+                background-color: a.$secondary-color;
+            }
+              
             .HotspotAnnotation {
-                background: a.$secondary-color;
-                border-radius: 4px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
                 color: white;
                 display: block;
                 position: absolute;
                 font-size: 1.2rem;
-                font-weight: 700;
                 left: calc(100% + 1em);
-                max-width: 15rem;
                 overflow-wrap: break-word;
-                padding: 0.5em 1em;
                 position: absolute;
                 bottom: -425%;
-                width: max-content;
                 visibility: hidden;
-                border: 3px solid a.$accent-color;
+                width: 25rem;
+                height: 8rem;
+                display: flex;
+                text-align: left;
+
+                // &:nth-of-type(even) {
+                //     background-color: a.$accent-color;
+                // }
+
+                // &:nth-of-type(odd) {
+                //     background-color: a.$secondary-color;
+                // }
     
-                p {
-                    color: white;
-                    line-height: 1.2;
-                    font-weight: 300;
-                    padding: 0 1rem;
-                }
+                // p {
+                //     color: white;
+                //     line-height: 1.2;
+                //     font-weight: 300;
+                //     padding: 0 1rem;
+                // }
                 
-                h2 {
-                    font-size: 1.18rem;
-                    margin-bottom: .25rem;
-                    padding: 0 .75rem;
-                }
+                // h2 {
+                //     font-size: 1.18rem;
+                //     margin-bottom: .25rem;
+                //     padding: 0 .75rem;
+                // }
                 
-                img {
-                    width: 30%;
-                    padding: 1rem;
-                    padding-top: 2rem;
+                // img {
+                //     padding: 1rem;
+                //     padding-top: 2rem;
+                // }
+
+            
+                    // &:nth-of-type(odd) .info-card-image {
+                    //     background-color: a.$secondary-color;
+                    //     margin-right: 0.25rem;
+                    // }
+                    
+                    // &:nth-child(even) .info-card-image.active {
+                    //     border-radius: 0 1rem 1rem 0;
+                    //     min-width: 35%;
+                    //     max-width: 35%;
+                    // }
+            
+                    // &:nth-child(odd) .info-card-image.active {
+                    //     border-radius: 1rem 0 0 1rem;
+                    //     min-width: 35%;
+                    //     max-width: 35%;
+                    // }
+            
+                    .info-card-image {
+                        padding: 1rem;
+                        border-radius: 1rem 0 0 1rem;
+                        width: 30%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: all 0.3s ease;
+                        margin-right: 0.25rem;
+
+            
+                        &.active {
+                            transition: all 0.3s ease;
+                            border-radius: 1rem 0 0 1rem;
+                        }
+                
+                        img {
+                            height: 70%;
+                        }
+                    }
+            
+                    .info-card-text {
+                        color: white;
+                        transition: opacity 0.5s ease, visibility 0.5s ease, width 0.3s ease;
+                        width: 100%;
+                        border-radius: 0 1rem 1rem 0;
+            
+                        h3 {
+                            width: 80%;
+                            margin: .75rem 0 0 1.25rem;
+                            font-size: 1.25rem;
+                            font-weight: 900;
+                        }
+            
+                        p {
+                            width: 85%;
+                            margin: .75rem 0 1rem 1.25rem;
+                            font-size: .8rem;
+                            font-weight: 500;
+                        }      
+        
                 }
             }
         }
