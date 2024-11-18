@@ -2,35 +2,40 @@
 
 #info-cards {
 
+    margin: 0 auto;
     margin-bottom: 1rem;
     width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     .info-card {
 
         display: flex;
         margin-bottom: 2rem;
         height: 10rem;
+        max-width: 90vw;
+        min-width: 90vw;
         justify-content: center;
-
 
         &:nth-child(odd) .info-card-image {
             background-color: a.$accent-color;
-            margin-left: 0.25rem;
         }
 
         &:nth-child(even) .info-card-image {
             background-color: a.$secondary-color;
-            margin-right: 0.25rem;
         }
         
         &:nth-child(odd) .info-card-image.active {
             border-radius: 0 1rem 1rem 0;
+            margin-left: 0.25rem;
             min-width: 35%;
             max-width: 35%;
         }
 
         &:nth-child(even) .info-card-image.active {
             border-radius: 1rem 0 0 1rem;
+            margin-right: 0.25rem;
             min-width: 35%;
             max-width: 35%;
         }
@@ -70,7 +75,7 @@
             opacity: 0;
             visibility: hidden;
             overflow: hidden;
-            transition: opacity 0.5s ease, visibility 0.5s ease, width 0.3s ease;
+            transition: opacity 1s ease, visibility 0.5s ease, width 0.3s ease;
 
             &.show {
                 opacity: 1;
@@ -135,7 +140,7 @@
             }
 
             .info-card-image {
-                min-width: 75%;
+                min-width: calc(70% - 1rem);
             }
 
             .info-card-text {
@@ -154,7 +159,6 @@
             .info-card-letter {
                 display: block;
                 color: white;
-                padding: 2rem;
                 border-radius: 1rem;
                 display: flex;
                 justify-content: center;
@@ -162,8 +166,8 @@
                 transition: all 0.3s ease;
                 font-family: sofachrome, 'Metropolis', Arial, serif;
                 font-size: 7rem;
-                min-width: 25vw;
-                max-width: 25vw;
+                min-width: 30%;
+                max-width: 30%;
 
                 p {
                     padding-bottom: .5rem;
@@ -212,8 +216,6 @@
                 transition: all 0.3s ease;
                 font-family: sofachrome, 'Metropolis', Arial, serif;
                 font-size: 7rem;
-                min-width: 25vw;
-                max-width: 25vw;
 
                 p {
                     padding-bottom: .5rem;
