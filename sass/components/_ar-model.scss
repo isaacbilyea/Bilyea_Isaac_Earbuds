@@ -6,8 +6,10 @@ model-viewer {
 
 #mobile-earbud {
     background-color: #fff;
-    width: 90%;
-    border: 3px solid a.$accent-color;
+    width: calc(90vw - 6px);
+    border-radius: 1rem;
+    margin: 0 auto;
+    border: 3px solid a.$secondary-color;
 }
 
 
@@ -15,13 +17,13 @@ model-viewer {
 
     model-viewer {
         display: block;
-        width: 90vw;
-        height: 70vh;
+        width: calc(90vw - 6px);
+        height: 50vh;
         background-color: #fff;
         margin: 0 auto;
         margin-bottom: 1rem;
-        padding: 2rem;
-        padding-left: 4rem;
+        border-radius: 1rem;
+        border: 3px solid a.$secondary-color;
     }
 
     .Hotspot {
@@ -36,15 +38,8 @@ model-viewer {
 
 @media screen and (min-width: 1200px) {
 
-    #mobile-info {
-        display: none;
-    }
-
     model-viewer {
-        padding: 0;
-        margin-bottom: 5rem;
-        border-radius: 1rem;
-        border: 5px solid a.$secondary-color;
+        height: 90vh;
 
         .Hotspot {
             display: block;
