@@ -37,7 +37,7 @@
 //Plyr - Video Player
 (() => {
 
-const player = new Plyr('video', {
+const player = new Plyr('.player', {
   settings: [
       'play-large',
       'play',    
@@ -59,17 +59,15 @@ const player = new Plyr('video', {
 
   function setCanvasSize() {
     canvas.width = window.innerWidth;
-    canvas.height = window.innerWidth * 9 / 16; // Maintain 16:9 aspect ratio
+    canvas.height = window.innerWidth * 9 / 16;
   }
 
-  setCanvasSize(); // Initial size setup
-  window.addEventListener('resize', setCanvasSize); // Adjust canvas on resize
+  setCanvasSize();
+  window.addEventListener('resize', setCanvasSize); 
 
   const frameCount = 280; //How many still frames
 
-  const images = []; //Array to hold images
-
-  //Fill the array with images and point to the images
+  const images = [];
 
   for(let i = 0; i < frameCount; i++) {
       const img = new Image();
@@ -100,7 +98,7 @@ const player = new Plyr('video', {
 
   function render() {
     context.clearRect(0, 0, canvas.width, canvas.height);
-    context.drawImage(images[buds.frame], 0, 0, canvas.width, canvas.height); // Scale image to fit canvas
+    context.drawImage(images[buds.frame], 0, 0, canvas.width, canvas.height);
   }
 
 })();
@@ -130,19 +128,7 @@ const player = new Plyr('video', {
 
       let selected = document.querySelector(`#hotspot-${index+1}`);
 
-      // hotspotTitle = document.createElement('h2');
-      // hotspotTitle.textContent = infoBox.title;
-
-      // hotspotText = document.createElement('p');
-      // hotspotText.textContent = infoBox.text;
-
-      // hotspotImage = document.createElement('img');
-      // hotspotImage.src = infoBox.image;
-
-      // selected.appendChild(hotspotImage);
-      // selected.appendChild(hotspotTitle);
-      // selected.appendChild(hotspotText);
-
+      //Changed to innerHTML to add divs - seperating image and text
       selected.innerHTML = 
       `
           <div class="info-card-image">
@@ -209,7 +195,7 @@ const player = new Plyr('video', {
     infoCardImage.forEach((image, index) => {
         if (image === clickedElement) {
             infoCardText[index].classList.toggle('show');
-            image.classList.toggle('active');  // Add this line
+            image.classList.toggle('active'); 
         }
     });
   }
@@ -226,6 +212,7 @@ const player = new Plyr('video', {
 
 //X-Ray Slider
 (() => {
+
   //VARIABLES
   const divisor = document.querySelector('#divisor');
   const slider = document.querySelector('#slider');
@@ -236,7 +223,7 @@ const player = new Plyr('video', {
   }
 
   function resetSlider() {
-    slider.value = 50; // Set default value
+    slider.value = 50; 
   }
 
   //EVENT LISTENERS

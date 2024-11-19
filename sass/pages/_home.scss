@@ -9,6 +9,13 @@
         width: 90vw;
     }
 
+    #hero-video {
+        width: 90vw;
+        transform: scale(1.6);
+        margin: 4rem auto;
+        filter: brightness(1.5);
+    }
+
     #hero-text {
 
         text-align: center;
@@ -46,6 +53,7 @@
 }
 
 #video-con {
+    @include a.center;
     border-radius: 1rem;
     border: 3px solid a.$secondary-color;
     overflow: hidden;
@@ -133,15 +141,19 @@
 @media screen and (min-width: 1200px) {
 
     #hero-con {
-        display: flex;
-        margin: 5rem auto;
-        justify-content: center;
-        align-items: center;
+        @include a.center;
+        margin: 7rem auto 10rem auto;
 
         #hero-image {
             width: auto;
             transform: scale(1.4);
             margin-top: 2rem;
+        }
+
+        #hero-video {
+            width: auto;
+            transform: scale(1.4);
+            margin-left: -3rem;
         }
 
         #hero-text {

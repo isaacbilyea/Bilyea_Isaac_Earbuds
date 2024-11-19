@@ -6,36 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.typekit.net/bhw3oux.css">
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
+    <link rel="icon" type="image/svg+xml" href="images/logo-green.svg">
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <title>Stride Earbuds</title>
 </head>
-<header id="main-header">
-    <a href="index.html">
-        <img src="images/logo-grey.svg" alt="logo">
-    </a>
-
-    <div id="hamburger-menu">
-        <div id="line1"></div>
-        <div id="line2"></div>
-        <div id="line3"></div>
-    </div>
-
-    <nav id="main-nav">
-        <h2 class="hidden">Main Navigation</h2>
-        <ul>
-            <li class="menu-item"><a href="index.html">SHOP</a></li>
-            <li class="menu-item"><a href="index.html">DISCOVER</a></li>
-            <li class="menu-item"><a href="index.html">SUPPORT</a></li>
-        </ul>
-    </nav>
-</header>
-
 <body>
 
+    <h1 class="hidden">Stride Earbuds</h1>
+
+    <!-- Header -->  
+    <header id="main-header">
+        <a href="index.html">
+            <img src="images/logo-grey.svg" alt="logo">
+        </a>
+    
+        <div id="hamburger-menu">
+            <div id="line1"></div>
+            <div id="line2"></div>
+            <div id="line3"></div>
+        </div>
+    
+        <nav id="main-nav">
+            <h2 class="hidden">Main Navigation</h2>
+            <ul>
+                <li class="menu-item"><a href="index.html">SHOP</a></li>
+                <li class="menu-item"><a href="index.html">DISCOVER</a></li>
+                <li class="menu-item"><a href="index.html">SUPPORT</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero -->  
     <section id="hero-con" class="grid-con">
         <div id="hero-image" class="col-span-full">
-            <img src="images/earbuds-hero.png" alt="image of earbuds with case">
+            <video id="hero-video" autoplay loop muted playsinline>
+                <source src="videos/earbuds-hero.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
         </div>
         <div id="hero-text" class="col-span-full">
             <h2>STRIDE</h2>
@@ -46,6 +54,7 @@
         </div>
     </section>
 
+    <!-- Video -->  
     <div class="col-span-full" id="video-con">
         <video class="player" preload="metadata" poster="images/video-poster.png">
             <source src="videos/test.mp4" type="video/mp4">
@@ -53,10 +62,12 @@
         </video>
     </div>
 
+    <!-- PNG Sequence -->  
     <div id="explode-view-con" class="col-span-full">
         <canvas id="explode-view"></canvas>
     </div>
 
+    <!-- Model Viewer -->  
     <h2 id="model-viewer-heading" class="section-heading col-span-full">EXPLORE</h2>
     <p id="mobile-sub-heading" class="section-sub-heading col-span-full">VIEW ON TABLET OR DESKTOP FOR A
         3D EXPERIENCE</p>
@@ -127,6 +138,7 @@
 
     <div id="line-seperator"></div>
 
+    <!-- Features -->  
     <section id="info-cards">
 
         <h2 id="info-cards-heading" class="section-heading col-span-full">FEATURES</h2>
@@ -211,11 +223,12 @@
         </div>
     </section>
 
+    <!-- X-Ray Slider -->  
     <div id="xray-con" class="col-span-full">
         <h2 class="section-heading">INNOVATION</h2>
-        <section id="mobile-tablet-view">
+        <div id="mobile-tablet-view">
             <img src="images/earbud-both.png" alt="multi view of earbuds">
-        </section>
+        </div>
         <div id="comparison-con">
             <div id="xray">
                 <div id="divisor"></div>
@@ -224,6 +237,7 @@
         </div>
     </div>
 
+    <!-- Footer -->  
     <footer id="main-footer">
         <div id="footer-con">
             <a href="index.html">

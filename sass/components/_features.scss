@@ -51,12 +51,10 @@
         }
 
         .info-card-image {
+            @include a.center;
             padding: 2rem;
             border-radius: 1rem;
             min-width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             transition: all 0.3s ease;
 
             &.active {
@@ -157,12 +155,10 @@
             }
 
             .info-card-letter {
+                @include a.center;
                 display: block;
                 color: white;
                 border-radius: 1rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 transition: all 0.3s ease;
                 font-family: sofachrome, 'Metropolis', Arial, serif;
                 font-size: 7rem;
@@ -206,13 +202,10 @@
             }
 
             .info-card-letter {
-                display: block;
+                @include a.center;
                 color: white;
                 padding: 2rem;
                 border-radius: 1rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 transition: all 0.3s ease;
                 font-family: sofachrome, 'Metropolis', Arial, serif;
                 font-size: 7rem;
