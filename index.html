@@ -5,58 +5,123 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.typekit.net/bhw3oux.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
+    <link rel="icon" type="image/svg+xml" href="images/logo-green.svg">
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <title>Stride Earbuds</title>
 </head>
-<header>
-    <h1>STRIDE</h1>
-</header>
 
 <body>
-    <model-viewer id="model" src="model/Bilyea_Isaac_Earbuds.gltf" ar ar-modes="webxr scene-viewer quick-look"
-        camera-controls tone-mapping="neutral" poster="images/poster.webp" shadow-intensity="1.75" shadow-softness="1"
-        exposure="0.75" environment-image="images/studio_small_09_4k.hdr" camera-orbit="73.86deg 82.57deg 351.6m"
-        field-of-view="30deg">
+
+    <h1 class="hidden">Stride Earbuds</h1>
+
+    <!-- Header -->
+    <header id="main-header">
+        <a href="index.html">
+            <img src="images/logo-grey.svg" alt="logo">
+        </a>
+
+        <div id="hamburger-menu">
+            <div id="line1"></div>
+            <div id="line2"></div>
+            <div id="line3"></div>
+        </div>
+
+        <nav id="main-nav">
+            <h2 class="hidden">Main Navigation</h2>
+            <ul>
+                <li class="menu-item"><a href="index.html">SHOP</a></li>
+                <li class="menu-item"><a href="index.html">DISCOVER</a></li>
+                <li class="menu-item"><a href="index.html">SUPPORT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero-con" class="grid-con">
+        <div id="hero-video-con" class="col-span-full scroll-animation">
+            <video id="hero-video" autoplay loop muted playsinline>
+                <source src="videos/earbuds-hero.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div id="hero-text" class="col-span-full scroll-animation">
+            <h2>STRIDE</h2>
+            <p>Experience wireless audio designed for superior sound and all-day comfort. Perfect for workouts,
+                commutes, and everything in between.</p>
+            <button>SHOP NOW</button>
+        </div>
+    </section>
+
+    <!-- Video -->
+    <div class="col-span-full scroll-animation" id="video-con">
+        <video class="player" preload="metadata" poster="images/video-poster.jpg">
+            <source src="videos/earbuds-video.mp4" type="video/mp4">
+            <p>Oops, something went wrong. You may be using an outdated browser or have javascript disabled.</p>
+        </video>
+    </div>
+
+    <!-- PNG Sequence -->
+    <div id="explode-view-con" class="col-span-full">
+        <canvas id="explode-view"></canvas>
+    </div>
+
+    <!-- Model Viewer -->
+    <h2 id="model-viewer-heading" class="section-heading col-span-full scroll-animation">EXPLORE</h2>
+    <p id="mobile-sub-heading" class="section-sub-heading col-span-full scroll-animation">VIEW ON TABLET OR DESKTOP FOR
+        A 3D EXPERIENCE</p>
+    <p id="tablet-sub-heading" class="section-sub-heading col-span-full scroll-animation">SWIPE TO INTERACT WITH OUR 3D
+        MODEL</p>
+
+    <model-viewer id="model" clas="scroll-animation" src="model/Bilyea_Isaac_Earbuds.gltf" ar
+        ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="images/poster.webp"
+        shadow-intensity="1.75" shadow-softness="1" exposure="0.75" environment-image="images/studio_small_09_4k.hdr"
+        camera-orbit="73.86deg 82.57deg 500m" camera-target="-400m m 300m" field-of-view="30deg">
+
         <button class="Hotspot" slot="hotspot-1"
-            data-position="-416.56149278137553m 42.517582943297384m 394.18555055022284m"
-            data-normal="-0.9686496209397094m 0.0037609272285329316m 0.24840243010030905m"
-            data-visibility-attribute="visible">
-            <span class="Hotspot-dot"></span>
-            <div class="HotspotAnnotation" id="hotspot-1">
-            </div>
-        </button>
-        <button class="Hotspot" slot="hotspot-2"
-            data-position="-451.5416200940677m 51.68318027330069m 310.2930297711527m"
-            data-normal="-0.9058271119635365m 0.2997035609461799m 0.2994244792731189m"
-            data-visibility-attribute="visible">
-            <span class="Hotspot-dot"></span>
-            <div class="HotspotAnnotation" id="hotspot-2">
-            </div>
-        </button>
-        <button class="Hotspot" slot="hotspot-3"
             data-position="-373.29470350265353m 119.03902223152934m 390.58444444986117m"
             data-normal="0.9859535803530111m 0.06692112301081456m -0.15302647053385923m"
             data-visibility-attribute="visible">
             <span class="Hotspot-dot"></span>
-            <div class="HotspotAnnotation" id="hotspot-3">
-            </div>
+            <span class="HotspotAnnotation" id="hotspot-1"></span>
         </button>
-        <button class="Hotspot" slot="hotspot-4" data-position="-407.6265799565102m 74.5473041636283m 361.989878003708m"
-            data-normal="-0.6754530454434051m 0.7366898329325986m -0.032423347374529586m"
-            data-visibility-attribute="visible">
-            <span class="Hotspot-dot"></span>
-            <div class="HotspotAnnotation" id="hotspot-4">
-            </div>
-        </button>
-        <button class="Hotspot" slot="hotspot-5"
+        <button class="Hotspot" slot="hotspot-2"
             data-position="-338.6656396265608m 42.19374540745709m 364.72082748880416m"
             data-normal="0.9998595021541614m 0.01641357451501114m -0.0034015472468991908m"
             data-visibility-attribute="visible">
             <span class="Hotspot-dot"></span>
-            <div class="HotspotAnnotation" id="hotspot-5">
-            </div>
+            <span class="HotspotAnnotation" id="hotspot-2"></span>
         </button>
+        <button class="Hotspot" slot="hotspot-3"
+            data-position="-357.3924019982543m 78.66171836270053m 338.75539465606585m"
+            data-normal="0.4663713455640523m 0.8654539730115707m -0.18299505084909573m"
+            data-visibility-attribute="visible">
+            <span class="Hotspot-dot"></span>
+            <span class="HotspotAnnotation" id="hotspot-3"></span>
+        </button>
+        <button class="Hotspot" slot="hotspot-4"
+            data-position="-439.256896770632m 49.50558836085968m 324.01484313055795m"
+            data-normal="-0.9058271119635365m 0.2997035609461799m 0.2994244792731189m"
+            data-visibility-attribute="visible">
+            <span class="Hotspot-dot"></span>
+            <span class="HotspotAnnotation" id="hotspot-4"></span>
+        </button>
+        <button class="Hotspot" slot="hotspot-5" data-position="-407.6265799565102m 74.5473041636283m 361.989878003708m"
+            data-normal="-0.6754530454434051m 0.7366898329325986m -0.032423347374529586m"
+            data-visibility-attribute="visible">
+            <span class="Hotspot-dot"></span>
+            <span class="HotspotAnnotation" id="hotspot-5"></span>
+        </button>
+        <button class="Hotspot" slot="hotspot-6"
+            data-position="-416.56149278137553m 42.517582943297384m 394.18555055022284m"
+            data-normal="-0.9686496209397094m 0.0037609272285329316m 0.24840243010030905m"
+            data-visibility-attribute="visible">
+            <span class="Hotspot-dot"></span>
+            <span class="HotspotAnnotation" id="hotspot-6"></span>
+        </button>
+
+
         <div class="progress-bar hide" slot="progress-bar">
             <div class="update-bar"></div>
         </div>
@@ -64,12 +129,138 @@
             View in your space
         </button>
         <div id="ar-prompt">
-            <img src="images/ar_hand_prompt.png">
+            <!--<img src="images/ar_hand_prompt.png">-->
         </div>
     </model-viewer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <div id="mobile-earbud" class="scroll-animation">
+        <img src="images/poster.webp" alt="image of earbud">
+    </div>
+
+    <div id="line-seperator" class="scroll-animation"></div>
+
+    <!-- Features -->
+    <section id="info-cards">
+
+        <h2 id="info-cards-heading" class="section-heading col-span-full scroll-animation">FEATURES</h2>
+        <p class="section-sub-heading col-span-full scroll-animation">CLICK EACH ICON TO LEARN MORE</p>
+
+        <div class="info-card col-span-full">
+            <div class="info-card-text">
+                <h3>SECURE FIT WING</h3>
+                <p>Ergonomic wing design ensures a secure and comfortable fit during any activity.</p>
+            </div>
+            <div class="info-card-image">
+                <img src="images/secure-fit.svg" alt="secure fit icon">
+            </div>
+            <div class="info-card-letter">
+                <p>S</p>
+            </div>
+        </div>
+
+        <div class="info-card col-span-full">
+            <div class="info-card-letter">
+                <p>T</p>
+            </div>
+            <div class="info-card-image">
+                <img src="images/multi-function.svg" alt="multi-function icon">
+            </div>
+            <div class="info-card-text">
+                <h3>MULTI-FUNCTION BUTTON</h3>
+                <p>One button to control music, calls, and voice assistant functions.</p>
+            </div>
+        </div>
+
+        <div class="info-card col-span-full">
+            <div class="info-card-text">
+                <h3>AMBIENT SOUND MODE</h3>
+                <p>Stay aware of your surroundings for safe, focused training without missing a beat.</p>
+            </div>
+            <div class="info-card-image">
+                <img src="images/ambient-sound.svg" alt="ambient sound icon">
+            </div>
+            <div class="info-card-letter">
+                <p>R</p>
+            </div>
+        </div>
+
+        <div class="info-card col-span-full">
+            <div class="info-card-letter">
+                <p>I</p>
+            </div>
+            <div class="info-card-image">
+                <img src="images/noise-cancelling.svg" alt="noise cancelling icon">
+            </div>
+            <div class="info-card-text">
+                <h3>NOISE-ISOLATING TIPS</h3>
+                <p>Soft silicone tips to block external noise for immersive audio experiences.</p>
+            </div>
+        </div>
+
+        <div class="info-card col-span-full">
+            <div class="info-card-text">
+                <h3>IPX6 WATER RESISTANT</h3>
+                <p>Engineered to withstand sweat and rain, perfect for intense workouts.</p>
+            </div>
+            <div class="info-card-image">
+                <img src="images/water-resistant.svg" alt="water resistant icon">
+            </div>
+            <div class="info-card-letter">
+                <p>D</p>
+            </div>
+        </div>
+
+        <div class="info-card col-span-full">
+            <div class="info-card-letter">
+                <p>E</p>
+            </div>
+            <div class="info-card-image">
+                <img src="images/fast-charge.svg" alt="fast charge icon">
+            </div>
+            <div class="info-card-text">
+                <h3>SUPER FAST CHARGING</h3>
+                <p>Enjoy rapid charging for minimal downtime and maximum playtime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- X-Ray Slider -->
+    <div id="xray-con">
+        <h2 class="section-heading scroll-animation">INNOVATION</h2>
+        <div id="mobile-tablet-view" class="scroll-animation">
+            <img src="images/earbud-both.png" alt="multi view of earbuds">
+        </div>
+        <div id="comparison-con" class="scroll-animation">
+            <div id="xray">
+                <div id="divisor"></div>
+                <input type="range" min="0" max="100" value="50" id="slider">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div id="footer-con">
+            <a href="index.html">
+                <img src="images/logo-white.svg" alt="logo">
+            </a>
+
+            <nav id="footer-nav">
+                <h2 class="hidden">Footer Navigation</h2>
+                <div id="sm-icons">
+                    <img src="images/sm-instagram.svg" alt="instagram-logo">
+                    <img src="images/sm-twitter.svg" alt="twitter-logo">
+                    <img src="images/sm-tiktok.svg" alt="tiktok-logo">
+                    <img src="images/sm-facebook.svg" alt="facebook-logo">
+                </div>
+            </nav>
+        </div>
+    </footer>
+
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
     <script src="js/main.js"></script>
 </body>
 
