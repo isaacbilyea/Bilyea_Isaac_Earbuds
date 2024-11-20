@@ -90,7 +90,7 @@
 
             p {
                 width: 85%;
-                margin: .75rem 0 1rem 1.25rem;
+                margin: .5rem 0 1rem 1.25rem;
                 font-size: .8rem;
             }
     
@@ -156,7 +156,6 @@
 
             .info-card-letter {
                 @include a.center;
-                display: block;
                 color: white;
                 border-radius: 1rem;
                 transition: all 0.3s ease;
@@ -193,7 +192,7 @@
     
                 p {
                     margin: .5rem 0 1.25rem 1.5rem;
-                    font-size: 1.5rem;
+                    font-size: 1.6rem;
                 }
             }
 
@@ -202,13 +201,6 @@
             }
 
             .info-card-letter {
-                @include a.center;
-                color: white;
-                padding: 2rem;
-                border-radius: 1rem;
-                transition: all 0.3s ease;
-                font-family: sofachrome, 'Metropolis', Arial, serif;
-                font-size: 7rem;
 
                 p {
                     padding-bottom: .5rem;

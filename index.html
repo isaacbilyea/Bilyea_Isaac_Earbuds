@@ -11,22 +11,23 @@
     <link href="css/main.css" rel="stylesheet">
     <title>Stride Earbuds</title>
 </head>
+
 <body>
 
     <h1 class="hidden">Stride Earbuds</h1>
 
-    <!-- Header -->  
+    <!-- Header -->
     <header id="main-header">
         <a href="index.html">
             <img src="images/logo-grey.svg" alt="logo">
         </a>
-    
+
         <div id="hamburger-menu">
             <div id="line1"></div>
             <div id="line2"></div>
             <div id="line3"></div>
         </div>
-    
+
         <nav id="main-nav">
             <h2 class="hidden">Main Navigation</h2>
             <ul>
@@ -36,10 +37,10 @@
             </ul>
         </nav>
     </header>
-    
-    <!-- Hero -->  
+
+    <!-- Hero -->
     <section id="hero-con" class="grid-con">
-        <div id="hero-image" class="col-span-full">
+        <div id="hero-video-con" class="col-span-full">
             <video id="hero-video" autoplay loop muted playsinline>
                 <source src="videos/earbuds-hero.webm" type="video/webm">
                 Your browser does not support the video tag.
@@ -47,27 +48,26 @@
         </div>
         <div id="hero-text" class="col-span-full">
             <h2>STRIDE</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's.
-            </p>
+            <p>Experience wireless audio designed for superior sound and all-day comfort. Perfect for workouts,
+                commutes, and everything in between.</p>
             <button>SHOP NOW</button>
         </div>
     </section>
 
-    <!-- Video -->  
+    <!-- Video -->
     <div class="col-span-full" id="video-con">
-        <video class="player" preload="metadata" poster="images/video-poster.png">
-            <source src="videos/test.mp4" type="video/mp4">
+        <video class="player" preload="metadata" poster="images/video-poster.jpg">
+            <source src="videos/earbuds-video.mp4" type="video/mp4">
             <p>Oops, something went wrong. You may be using an outdated browser or have javascript disabled.</p>
         </video>
     </div>
 
-    <!-- PNG Sequence -->  
+    <!-- PNG Sequence -->
     <div id="explode-view-con" class="col-span-full">
         <canvas id="explode-view"></canvas>
     </div>
 
-    <!-- Model Viewer -->  
+    <!-- Model Viewer -->
     <h2 id="model-viewer-heading" class="section-heading col-span-full">EXPLORE</h2>
     <p id="mobile-sub-heading" class="section-sub-heading col-span-full">VIEW ON TABLET OR DESKTOP FOR A
         3D EXPERIENCE</p>
@@ -138,7 +138,7 @@
 
     <div id="line-seperator"></div>
 
-    <!-- Features -->  
+    <!-- Features -->
     <section id="info-cards">
 
         <h2 id="info-cards-heading" class="section-heading col-span-full">FEATURES</h2>
@@ -223,8 +223,8 @@
         </div>
     </section>
 
-    <!-- X-Ray Slider -->  
-    <div id="xray-con" class="col-span-full">
+    <!-- X-Ray Slider -->
+    <div id="xray-con">
         <h2 class="section-heading">INNOVATION</h2>
         <div id="mobile-tablet-view">
             <img src="images/earbud-both.png" alt="multi view of earbuds">
@@ -237,7 +237,7 @@
         </div>
     </div>
 
-    <!-- Footer -->  
+    <!-- Footer -->
     <footer id="main-footer">
         <div id="footer-con">
             <a href="index.html">
@@ -256,10 +256,10 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
     <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
     <script src="js/main.js"></script>
 </body>
 

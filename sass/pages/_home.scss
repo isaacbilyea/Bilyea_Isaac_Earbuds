@@ -5,15 +5,13 @@
 
     margin: 3rem 0;
 
-    #hero-image {
-        width: 90vw;
-    }
-
     #hero-video {
         width: 90vw;
         transform: scale(1.6);
-        margin: 4rem auto;
+        margin: 2rem auto 4rem auto;
+        padding-left: .5rem;
         filter: brightness(1.5);
+        pointer-events: none;
     }
 
     #hero-text {
@@ -23,7 +21,7 @@
 
         h2 {
             font-family: a.$alt-heading-font-family;
-            font-size: 10vw;
+            font-size: 4rem;
             margin: 0;
         }
 
@@ -44,18 +42,20 @@
             background-color: transparent;
             font-size: 1.5rem;
             border-radius: 0 0 1rem 1rem;
+            cursor: pointer;
+            margin: 1rem 0;
         }
     }
 }
 
 #explode-view-con {
-    margin: 5rem 0;
+    display: none
 }
 
 #video-con {
     @include a.center;
     border-radius: 1rem;
-    border: 3px solid a.$secondary-color;
+    border: 3px solid a.$accent-color;
     overflow: hidden;
     width: calc(90vw - 6px);
     margin: 0 auto;
@@ -108,14 +108,14 @@
         content: 'S';
         font-family: a.$alt-heading-font-family;
         position: absolute;
-        margin-top: -.25rem;
         left: 50%;
+        margin-top: -.25rem;
         transform: translate(-50%, -50%);
         color: a.$accent-color;
         font-size: 3rem;
-      }
-}
 
+    }
+}
 
 @media screen and (min-width: 768px) {
 
@@ -136,6 +136,11 @@
         display: block;
     }
 
+    #explode-view-con {
+        display: block;
+        margin: 3rem 0;
+    }
+
 }
 
 @media screen and (min-width: 1200px) {
@@ -144,16 +149,10 @@
         @include a.center;
         margin: 7rem auto 10rem auto;
 
-        #hero-image {
-            width: auto;
-            transform: scale(1.4);
-            margin-top: 2rem;
-        }
-
         #hero-video {
             width: auto;
-            transform: scale(1.4);
-            margin-left: -3rem;
+            transform: scale(1.7);
+            margin: 2rem auto 0 auto;
         }
 
         #hero-text {
@@ -162,7 +161,6 @@
 
             h2 {
                 width: auto;
-                font-size: 4rem;
             }
 
             p {
@@ -172,6 +170,12 @@
             button {
                 width: auto;
                 padding: 1rem 7rem;
+
+                &:hover {
+                    background-color: #2d2d2d;
+                    color: white;
+                    transition: all 300ms ease;
+                }
             }
         }
     }

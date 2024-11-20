@@ -2,6 +2,10 @@
 
 #xray-con {
   background-color: a.$accent-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 2rem;
 
   h2 {
@@ -10,8 +14,12 @@
     font-size: 3.5rem;
   }
 
-  #mobile-tablet-view img {
-    border-radius: 1rem;
+  #mobile-tablet-view {
+    width: 90vw;
+
+    img {
+      border-radius: 1rem;
+    }
   }
 
   #comparison-con {
@@ -35,10 +43,8 @@
 
     #comparison-con {
       display: block;
-      max-width: 1200px;
-      margin: 0 auto;
+      width: 90vw;
     }
-
 
     #xray {
       position: relative;
@@ -129,16 +135,4 @@
       background: #fff;
     }
   }
-}
-
-@media screen and (min-width: 1920px) {
-
-  #xray-con {
-    
-    #comparison-con {
-      max-width: 1600px;
-    }
-
-  }
-
 }

@@ -63,6 +63,8 @@ const player = new Plyr('.player', {
   }
 
   setCanvasSize();
+  
+  //Resets canvas size when window is resized
   window.addEventListener('resize', setCanvasSize); 
 
   const frameCount = 280; //How many still frames
@@ -94,7 +96,7 @@ const player = new Plyr('.player', {
 
   })
 
-  images[0].addEventListener('load', render)
+  images[0].addEventListener('load', render);
 
   function render() {
     context.clearRect(0, 0, canvas.width, canvas.height);
@@ -163,6 +165,9 @@ const player = new Plyr('.player', {
     const parent = this.parentElement;
     const selected = document.querySelector(`#${parent.slot}`);
 
+    //Fixes issue of info staying shown if moving mouse before animation finishes
+    gsap.killTweensOf(selected);
+
     gsap.to(selected, {autoAlpha: 0, scale: 0.8, rotation: -5, duration: 0.3, ease: "power3.in"});
   }
   
@@ -179,6 +184,9 @@ const player = new Plyr('.player', {
       hotspot.addEventListener("mouseenter", showInfo);
       hotspot.addEventListener("mouseleave", hideInfo);
 });
+
+})();
+
 
 //Features
 (() => {
@@ -208,8 +216,6 @@ const player = new Plyr('.player', {
 
 })();
 
-})();
-
 //X-Ray Slider
 (() => {
 
@@ -230,3 +236,5 @@ const player = new Plyr('.player', {
   slider.addEventListener('input', moveDivisor);
   window.addEventListener('load', resetSlider);
 })();
+
+
