@@ -1,4 +1,4 @@
-# Stride Earbuds - Wireless Sport Earbuds for Active Users 🎧
+# Stride Earbuds - Wireless Sport Earbuds 🎧
 
 Welcome to the Stride Earbuds website repository! This project showcases the responsive website for **Stride**, a brand of wireless sport earbuds designed to empower active users. Here, you’ll find the code, assets, and documentation for an engaging and user-friendly online experience.
 
@@ -6,11 +6,11 @@ Welcome to the Stride Earbuds website repository! This project showcases the res
 
 
 ## Table of Contents 📋
-1. [About](#about-🎯)
-2. [Skills and Technologies](#skills-and-technologies-🛠️)
-3. [Installation](#installation-📦)
-4. [Credits](#credits-👤)
-5. [License](#license-📄)
+1. [About](#about-)
+2. [Skills and Technologies](#skills-and-technologies-)
+3. [Installation](#installation-)
+4. [Credits](#credits-)
+5. [License](#license-)
 
 
 ## About 🎯
