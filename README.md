@@ -1,28 +1,56 @@
-# Stride Earbuds - Isaac Bilyea
+# Stride Earbuds - Wireless Sport Earbuds for Active Users 🎧
 
-Welcome to the Stride Earbuds Website repository! This project is focused on building a responsive site for Stride, wireless sport earbuds designed for active users. Here, you’ll find code and assets for an engaging online experience highlighting Stride's features and performance. Thanks for visiting!
+Welcome to the Stride Earbuds website repository! This project showcases the responsive website for **Stride**, a brand of wireless sport earbuds designed to empower active users. Here, you’ll find the code, assets, and documentation for an engaging and user-friendly online experience.
 
-## Installation
+![Stride Readme Photo](/images/readme.jpg)
 
-There is no installation required.
+---
 
-## Usage
+## Table of Contents 📋
+1. [About](#about)
+2. [Skills and Technologies](#skills-and-technologies)
+3. [Installation](#installation)
+4. [Credits](#credits)
+5. [License](#license)
 
-Open index.html in the browser of your choice.
+---
 
-## History
+## About 🎯
 
-- October 31st, 2024
-- November 5th, 2024
-- November 7th, 2024
-- November 15th, 2024
-- November 16th, 2024
-- November 17th, 2024
+The Stride Earbuds website is a responsive platform designed to showcase the features and performance of Stride wireless sport earbuds. It incorporates modern design principles, interactive animations, and a 3D model viewer for an engaging user experience.
 
-## Credits
+---
 
-Isaac Bilyea
+## Skills and Technologies 🛠️
 
-## License
+This project demonstrates the following skills and technologies:
 
-MIT - please see license file.
+- **Languages**: HTML5, CSS3, JavaScript
+- **Preprocessors**: Sass (SCSS)
+- **Frameworks and Libraries**: GreenSock (GSAP)
+- **Tools**: Git, VS Code
+
+---
+
+## Installation 📦
+
+This project does not require installation. To view the site locally:
+
+1. Clone or download this repository to your local machine.
+2. Open the `index.html` file in your browser of choice.
+
+For developers:
+- Use a local server (e.g., Live Server in VS Code) for better performance and testing.
+
+---
+
+## Credits 👤
+
+This project was created and designed by **Isaac Bilyea**.  
+For questions or feedback, feel free to reach out.
+
+---
+
+## License 📄
+
+This project is licensed under the MIT License. For more details, refer to the [LICENSE](LICENSE) file in the repository.
