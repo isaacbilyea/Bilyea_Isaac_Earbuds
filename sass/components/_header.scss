@@ -125,7 +125,7 @@
       text-decoration: none;
       color: a.$secondary-color;
       font-size: 1.5rem;
-      font-weight: 900;
+      font-weight: 800;
     }
 
     @keyframes fadeIn {
@@ -211,6 +211,11 @@
       a {
         font-size: 1.5rem;
         display: block;
+
+          &:hover {
+            color: a.$accent-color;
+            transition: 150ms ease;
+          }
       }
 
       .menu-item {

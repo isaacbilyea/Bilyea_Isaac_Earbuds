@@ -18,7 +18,7 @@ model-viewer {
     model-viewer {
         display: block;
         width: calc(90vw - 6px);
-        height: 50vh;
+        height: 60vh;
         background-color: #fff;
         margin: 0 auto;
         margin-bottom: 1rem;
@@ -50,15 +50,13 @@ model-viewer {
             position: relative;
     
             &.hovered .Hotspot-dot {
+                @include a.center;
                 position: absolute;
                 left: 30%;
                 transform: translate(-50%, -50%);
                 width: 3rem;
                 height: 3rem;
                 border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 transition: width 150ms ease-in, height 150ms ease-in;
                 animation: none;
             }
@@ -140,15 +138,13 @@ model-viewer {
             }
     
             &:focus .Hotspot-dot {
+                @include a.center;
                 position: absolute;
                 left: 30%;
                 transform: translate(-50%, -50%);
                 width: 3rem;
                 height: 3rem;
                 border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 transition: width 150ms ease-in, height 150ms ease-in;
                 animation: none;
             }
@@ -231,58 +227,12 @@ model-viewer {
                 height: 8rem;
                 display: flex;
                 text-align: left;
-
-                // &:nth-of-type(even) {
-                //     background-color: a.$accent-color;
-                // }
-
-                // &:nth-of-type(odd) {
-                //     background-color: a.$secondary-color;
-                // }
-    
-                // p {
-                //     color: white;
-                //     line-height: 1.2;
-                //     font-weight: 300;
-                //     padding: 0 1rem;
-                // }
-                
-                // h2 {
-                //     font-size: 1.18rem;
-                //     margin-bottom: .25rem;
-                //     padding: 0 .75rem;
-                // }
-                
-                // img {
-                //     padding: 1rem;
-                //     padding-top: 2rem;
-                // }
-
-            
-                    // &:nth-of-type(odd) .info-card-image {
-                    //     background-color: a.$secondary-color;
-                    //     margin-right: 0.25rem;
-                    // }
-                    
-                    // &:nth-child(even) .info-card-image.active {
-                    //     border-radius: 0 1rem 1rem 0;
-                    //     min-width: 35%;
-                    //     max-width: 35%;
-                    // }
-            
-                    // &:nth-child(odd) .info-card-image.active {
-                    //     border-radius: 1rem 0 0 1rem;
-                    //     min-width: 35%;
-                    //     max-width: 35%;
-                    // }
             
                     .info-card-image {
+                        @include a.center;
                         padding: 1rem;
                         border-radius: 1rem 0 0 1rem;
                         width: 30%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
                         transition: all 0.3s ease;
                         margin-right: 0.25rem;
 
