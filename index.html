@@ -40,13 +40,13 @@
 
     <!-- Hero -->
     <section id="hero-con" class="grid-con">
-        <div id="hero-video-con" class="col-span-full">
+        <div id="hero-video-con" class="col-span-full scroll-animation">
             <video id="hero-video" autoplay loop muted playsinline>
                 <source src="videos/earbuds-hero.webm" type="video/webm">
                 Your browser does not support the video tag.
             </video>
         </div>
-        <div id="hero-text" class="col-span-full">
+        <div id="hero-text" class="col-span-full scroll-animation">
             <h2>STRIDE</h2>
             <p>Experience wireless audio designed for superior sound and all-day comfort. Perfect for workouts,
                 commutes, and everything in between.</p>
@@ -55,7 +55,7 @@
     </section>
 
     <!-- Video -->
-    <div class="col-span-full" id="video-con">
+    <div class="col-span-full scroll-animation" id="video-con">
         <video class="player" preload="metadata" poster="images/video-poster.jpg">
             <source src="videos/earbuds-video.mp4" type="video/mp4">
             <p>Oops, something went wrong. You may be using an outdated browser or have javascript disabled.</p>
@@ -68,15 +68,16 @@
     </div>
 
     <!-- Model Viewer -->
-    <h2 id="model-viewer-heading" class="section-heading col-span-full">EXPLORE</h2>
-    <p id="mobile-sub-heading" class="section-sub-heading col-span-full">VIEW ON TABLET OR DESKTOP FOR A
-        3D EXPERIENCE</p>
-    <p id="tablet-sub-heading" class="section-sub-heading col-span-full">SWIPE TO INTERACT WITH OUR 3D MODEL</p>
+    <h2 id="model-viewer-heading" class="section-heading col-span-full scroll-animation">EXPLORE</h2>
+    <p id="mobile-sub-heading" class="section-sub-heading col-span-full scroll-animation">VIEW ON TABLET OR DESKTOP FOR
+        A 3D EXPERIENCE</p>
+    <p id="tablet-sub-heading" class="section-sub-heading col-span-full scroll-animation">SWIPE TO INTERACT WITH OUR 3D
+        MODEL</p>
 
-    <model-viewer id="model" src="model/Bilyea_Isaac_Earbuds.gltf" ar ar-modes="webxr scene-viewer quick-look"
-        camera-controls tone-mapping="neutral" poster="images/poster.webp" shadow-intensity="1.75" shadow-softness="1"
-        exposure="0.75" environment-image="images/studio_small_09_4k.hdr" camera-orbit="73.86deg 82.57deg 500m"
-        camera-target="-400m m 300m" field-of-view="30deg">
+    <model-viewer id="model" clas="scroll-animation" src="model/Bilyea_Isaac_Earbuds.gltf" ar
+        ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="images/poster.webp"
+        shadow-intensity="1.75" shadow-softness="1" exposure="0.75" environment-image="images/studio_small_09_4k.hdr"
+        camera-orbit="73.86deg 82.57deg 500m" camera-target="-400m m 300m" field-of-view="30deg">
 
         <button class="Hotspot" slot="hotspot-1"
             data-position="-373.29470350265353m 119.03902223152934m 390.58444444986117m"
@@ -132,17 +133,17 @@
         </div>
     </model-viewer>
 
-    <div id="mobile-earbud">
+    <div id="mobile-earbud" class="scroll-animation">
         <img src="images/poster.webp" alt="image of earbud">
     </div>
 
-    <div id="line-seperator"></div>
+    <div id="line-seperator" class="scroll-animation"></div>
 
     <!-- Features -->
     <section id="info-cards">
 
-        <h2 id="info-cards-heading" class="section-heading col-span-full">FEATURES</h2>
-        <p class="section-sub-heading col-span-full">CLICK EACH ICON TO LEARN MORE</p>
+        <h2 id="info-cards-heading" class="section-heading col-span-full scroll-animation">FEATURES</h2>
+        <p class="section-sub-heading col-span-full scroll-animation">CLICK EACH ICON TO LEARN MORE</p>
 
         <div class="info-card col-span-full">
             <div class="info-card-text">
@@ -225,11 +226,11 @@
 
     <!-- X-Ray Slider -->
     <div id="xray-con">
-        <h2 class="section-heading">INNOVATION</h2>
-        <div id="mobile-tablet-view">
+        <h2 class="section-heading scroll-animation">INNOVATION</h2>
+        <div id="mobile-tablet-view" class="scroll-animation">
             <img src="images/earbud-both.png" alt="multi view of earbuds">
         </div>
-        <div id="comparison-con">
+        <div id="comparison-con" class="scroll-animation">
             <div id="xray">
                 <div id="divisor"></div>
                 <input type="range" min="0" max="100" value="50" id="slider">

@@ -238,3 +238,88 @@ const player = new Plyr('.player', {
 })();
 
 
+//GSAP
+(() => {
+
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // //gsap.utils is a collection of methods from GSAP
+    // //Takes a bunch of elements and turns them into an Array so we can mass apply a basic scrollTrigger animation
+    // gsap.utils.toArray("#hero-video-con, #hero-text, .player").forEach((item) => {
+    
+    // //Sets initial state
+    // gsap.set(item, { opacity: 0, y: 50 });
+    
+    // gsap.to(item, {
+    //     scrollTrigger: {
+    //     trigger: item, 
+    //     start: "top 90%",
+    //     end: "bottom 75%",
+    //     toggleActions: "play none none reverse",
+    //     scrub: true,
+    //     },
+    //     opacity: 1, 
+    //     y: 0,  
+    //     duration: 1, 
+    //     ease: "power2.inOut",
+    // });
+    // });
+    
+    //VARIABLES
+    const oddInfoCards = document.querySelectorAll(".info-card:nth-child(odd)");
+    const evenInfoCards = document.querySelectorAll(".info-card:nth-child(even)");
+    const scrollAnimation = document.querySelectorAll('.scroll-animation');
+
+    scrollAnimation.forEach((element) => {
+      gsap.from(element, {
+        y: 50, 
+        opacity: 0,
+        scrollTrigger: {
+          trigger: element,
+          start: "top 90%",
+          end: "bottom 75%", 
+          toggleActions: "play none none reverse",
+          scrub: 0.1,
+        },
+        duration: 0.5, 
+        ease: "power2.out", 
+      });
+    });
+
+    oddInfoCards.forEach((card) => {
+      gsap.set(card, { opacity: 0, x: 50 });
+    
+      gsap.to(card, {
+        scrollTrigger: {
+          trigger: card,
+          start: "top 80%", 
+          end: "top 50%", 
+          toggleActions: "play none none reverse",
+          scrub: 0.3,
+        },
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        ease: "power1.out", 
+      });
+    });
+    
+    evenInfoCards.forEach((card) => {
+      gsap.set(card, { opacity: 0, x: -50 });
+    
+      gsap.to(card, {
+        scrollTrigger: {
+          trigger: card,
+          start: "top 80%",
+          end: "top 50%",
+          toggleActions: "play none none reverse",
+          scrub: 0.3,
+        },
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        ease: "power1.out",
+      });
+    });
+
+})();
