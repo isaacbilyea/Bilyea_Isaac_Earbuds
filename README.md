@@ -7,7 +7,7 @@ Welcome to the Stride Earbuds website repository! This project showcases the res
 
 ## Table of Contents 📋
 1. [About](#about-)
-2. [Technologies](#technologies)
+2. [Skills and Technologies](#skills-and-technologies)
 3. [Installation](#installation-)
 4. [Credits](#credits-)
 5. [License](#license-)
@@ -18,7 +18,7 @@ Welcome to the Stride Earbuds website repository! This project showcases the res
 The Stride Earbuds website is a responsive platform designed to showcase the features and performance of Stride wireless sport earbuds. It incorporates modern design principles, interactive animations, and a 3D model viewer for an engaging user experience.
 
 
-## Technologies 🛠️
+## Skills and Technologiess 🛠️ <a name="skills-and-technologies"></a>
 
 This project demonstrates the following skills and technologies:
 
