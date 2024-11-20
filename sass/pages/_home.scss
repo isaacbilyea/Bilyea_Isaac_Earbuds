@@ -1,0 +1,186 @@
+@use "../abstracts" as a;
+
+
+#hero-con {
+
+    margin: 3rem 0;
+
+    #hero-video {
+        width: 90vw;
+        transform: scale(1.6);
+        margin: 2rem auto 4rem auto;
+        padding-left: .5rem;
+        filter: brightness(1.5);
+        pointer-events: none;
+    }
+
+    #hero-text {
+
+        text-align: center;
+        color: a.$secondary-color;
+
+        h2 {
+            font-family: a.$alt-heading-font-family;
+            font-size: 4rem;
+            margin: 0;
+        }
+
+        p {
+            width: 80vw;
+            margin: 1rem auto;
+            font-size: 1.25rem;
+        }
+
+        button {
+            border: none;
+            color: a.$secondary-color;
+            font-weight: 900;
+            font-family: a.$body-font-family;
+            border: 3px solid a.$secondary-color;
+            padding: 1rem;
+            width: 80vw;
+            background-color: transparent;
+            font-size: 1.5rem;
+            border-radius: 0 0 1rem 1rem;
+            cursor: pointer;
+            margin: 1rem 0;
+        }
+    }
+}
+
+#explode-view-con {
+    display: none
+}
+
+#video-con {
+    @include a.center;
+    border-radius: 1rem;
+    border: 3px solid a.$accent-color;
+    overflow: hidden;
+    width: calc(90vw - 6px);
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+.plyr--video {
+    --plyr-color-main: #2d2d2d;
+    --plyr-control-icon-size: 1rem;
+    --plyr-control-radius: 1.25rem;
+    --plyr-font-family: 'Metropolis', Arial, serif;
+    --plyr-control-spacing: 1rem;
+    --plyr-range-fill-background: #fff;
+    --plyr-range-thumb-background: #AFAA47;
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 4.5rem;
+    font-weight: 900;
+    margin: 0;
+    margin-bottom: .5rem;
+    color: a.$secondary-color;
+}
+
+.section-sub-heading {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: -1rem auto 3rem auto;
+    color: a.$secondary-color;
+}
+
+#mobile-sub-heading {
+    width: 60%;
+}
+
+#tablet-sub-heading {
+    display: none;
+}
+
+#line-seperator {
+    border-top: 5px solid a.$secondary-color;
+    width: calc(90vw - 4px);
+    border-radius: 1rem;
+    margin: 7rem auto 5rem auto;
+    position: relative;
+
+    &::before {
+        content: 'S';
+        font-family: a.$alt-heading-font-family;
+        position: absolute;
+        left: 50%;
+        margin-top: -.25rem;
+        transform: translate(-50%, -50%);
+        color: a.$accent-color;
+        font-size: 3rem;
+
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .section-heading {
+        font-size: 7rem;
+    }
+    
+    .section-sub-heading {
+        font-size: 1.75rem;
+        margin: -2rem auto 4rem auto;
+    }
+
+    #mobile-sub-heading {
+        display: none;
+    }
+
+    #tablet-sub-heading {
+        display: block;
+    }
+
+    #explode-view-con {
+        display: block;
+        margin: 3rem 0;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    #hero-con {
+        @include a.center;
+        margin: 7rem auto 10rem auto;
+
+        #hero-video {
+            width: auto;
+            transform: scale(1.7);
+            margin: 2rem auto 0 auto;
+        }
+
+        #hero-text {
+            
+            margin-right: 2rem;
+
+            h2 {
+                width: auto;
+            }
+
+            p {
+                width: auto;
+            }
+
+            button {
+                width: auto;
+                padding: 1rem 7rem;
+
+                &:hover {
+                    background-color: #2d2d2d;
+                    color: white;
+                    transition: all 300ms ease;
+                }
+            }
+        }
+    }
+
+    
+
+
+}
