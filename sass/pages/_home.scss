@@ -60,6 +60,10 @@
     width: calc(90vw - 6px);
     margin: 0 auto;
     margin-bottom: 3rem;
+
+    video {
+        width: 90vw;
+    }
 }
 
 .plyr--video {

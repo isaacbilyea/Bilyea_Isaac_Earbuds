@@ -88,7 +88,6 @@ const player = new Plyr('.player', {
           trigger: "#explode-view",
           pin: true,
           scrub: 1,
-          markers: true,
           start: "top top",
           end: "500% top"
       },
@@ -243,28 +242,6 @@ const player = new Plyr('.player', {
 
     gsap.registerPlugin(ScrollTrigger);
     
-    // //gsap.utils is a collection of methods from GSAP
-    // //Takes a bunch of elements and turns them into an Array so we can mass apply a basic scrollTrigger animation
-    // gsap.utils.toArray("#hero-video-con, #hero-text, .player").forEach((item) => {
-    
-    // //Sets initial state
-    // gsap.set(item, { opacity: 0, y: 50 });
-    
-    // gsap.to(item, {
-    //     scrollTrigger: {
-    //     trigger: item, 
-    //     start: "top 90%",
-    //     end: "bottom 75%",
-    //     toggleActions: "play none none reverse",
-    //     scrub: true,
-    //     },
-    //     opacity: 1, 
-    //     y: 0,  
-    //     duration: 1, 
-    //     ease: "power2.inOut",
-    // });
-    // });
-    
     //VARIABLES
     const oddInfoCards = document.querySelectorAll(".info-card:nth-child(odd)");
     const evenInfoCards = document.querySelectorAll(".info-card:nth-child(even)");
@@ -293,7 +270,7 @@ const player = new Plyr('.player', {
         scrollTrigger: {
           trigger: card,
           start: "top 80%", 
-          end: "top 50%", 
+          end: "top 60%", 
           toggleActions: "play none none reverse",
           scrub: 0.3,
         },
@@ -311,7 +288,7 @@ const player = new Plyr('.player', {
         scrollTrigger: {
           trigger: card,
           start: "top 80%",
-          end: "top 50%",
+          end: "top 60%",
           toggleActions: "play none none reverse",
           scrub: 0.3,
         },
