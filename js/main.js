@@ -19,7 +19,7 @@
   }
 
   function hideMenu() {
-    // Resets the menu for desktop
+    //Resets the menu for desktop
     if (window.innerWidth >= 1200) {
       hamburgerMenu.classList.remove('activate');
       mainNav.classList.remove('show');
@@ -27,7 +27,7 @@
     }
   }
 
-  // EVENT LISTENERS
+  //EVENT LISTENERS
 
   hamburgerMenu.addEventListener('click', toggleMenu);
   window.addEventListener('resize', hideMenu);
@@ -259,8 +259,8 @@ const player = new Plyr('.player', {
     gsap.registerPlugin(ScrollTrigger);
     
     //VARIABLES
-    const oddInfoCards = document.querySelectorAll(".info-card:nth-child(odd)");
-    const evenInfoCards = document.querySelectorAll(".info-card:nth-child(even)");
+    const oddInfoCards = document.querySelectorAll('.info-card:nth-child(odd)');
+    const evenInfoCards = document.querySelectorAll('.info-card:nth-child(even)');
     const scrollAnimation = document.querySelectorAll('.scroll-animation');
 
     scrollAnimation.forEach((element) => {
@@ -274,15 +274,15 @@ const player = new Plyr('.player', {
           toggleActions: "play none none reverse",
           scrub: 0.1,
         },
-        duration: 0.5, 
+        duration: 1, 
         ease: "power2.out", 
       });
     });
 
     oddInfoCards.forEach((card) => {
       gsap.from(card, {
-        opacity: 0,
         x: 50,
+        opacity: 0,
         scrollTrigger: {
           trigger: card,
           start: "top 80%", 
@@ -297,8 +297,8 @@ const player = new Plyr('.player', {
     
     evenInfoCards.forEach((card) => {
       gsap.from(card, {
-        opacity: 0,
         x: -50,
+        opacity: 0,
         scrollTrigger: {
           trigger: card,
           start: "top 80%",

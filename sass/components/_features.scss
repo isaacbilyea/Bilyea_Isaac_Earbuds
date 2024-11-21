@@ -73,12 +73,22 @@
             opacity: 0;
             visibility: hidden;
             overflow: hidden;
-            transition: opacity 1s ease, visibility 0.5s ease, width 0.3s ease;
+            transition: opacity 0.5s ease, visibility 0.5s ease, width 0.3s ease;
 
             &.show {
                 opacity: 1;
                 visibility: visible;
-                width: 100%; 
+                width: 100%;
+            }
+
+            &.show p {
+                opacity: 1;
+                transition: opacity 1s ease;
+            }
+
+            &.show h3 {
+                opacity: 1;
+                transition: opacity 1s ease;
             }
 
             h3 {
@@ -86,12 +96,15 @@
                 margin: .75rem 0 0 1.25rem;
                 font-size: 1.25rem;
                 font-weight: 900;
+                opacity: 0;
+                white-space: nowrap;
             }
 
             p {
                 width: 85%;
                 margin: .5rem 0 1rem 1.25rem;
                 font-size: .8rem;
+                opacity: 0;
             }
     
         }
