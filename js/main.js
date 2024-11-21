@@ -10,7 +10,6 @@
 
   //FUNCTIONS
 
-  // Toggles classes for showing/hiding mobile menu stuff
   function toggleMenu() {
     if (window.innerWidth < 1200) {
       hamburgerMenu.classList.toggle('activate');
@@ -19,8 +18,8 @@
     }
   }
 
-  // Resets the menu for large screens
   function hideMenu() {
+    // Resets the menu for desktop
     if (window.innerWidth >= 1200) {
       hamburgerMenu.classList.remove('activate');
       mainNav.classList.remove('show');
@@ -29,10 +28,15 @@
   }
 
   // EVENT LISTENERS
+
   hamburgerMenu.addEventListener('click', toggleMenu);
-  window.addEventListener('resize',hideMenu);
+  window.addEventListener('resize', hideMenu);
 
 })();
+
+
+//----------------------------------------------------------------------------------//
+
 
 //Plyr - Video Player
 (() => {
@@ -51,34 +55,41 @@ const player = new Plyr('.player', {
 
 })();
 
+
+//----------------------------------------------------------------------------------//
+
+
 //Earbuds Scrub
 (() => {
 
+  //VARIABLES
+
   const canvas = document.querySelector('#explode-view');
   const context = canvas.getContext('2d');
+  const frameCount = 280;
+  const images = [];
+  const buds = {
+    frame: 0
+  };
+  
+  //FUNCTIONS
 
   function setCanvasSize() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerWidth * 9 / 16;
   }
 
+  function render() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.drawImage(images[buds.frame], 0, 0, canvas.width, canvas.height);
+  }
+
   setCanvasSize();
-  
-  //Resets canvas size when window is resized
-  window.addEventListener('resize', setCanvasSize); 
-
-  const frameCount = 280; //How many still frames
-
-  const images = [];
 
   for(let i = 0; i < frameCount; i++) {
       const img = new Image();
       img.src = `images/earbud_${((i+1).toString().padStart(5, '0'))}.png`;
       images.push(img);
-  }
-
-  const buds = {
-      frame: 0
   }
 
   gsap.to(buds, {
@@ -95,14 +106,19 @@ const player = new Plyr('.player', {
 
   })
 
+  //EVENT LISTENERS
+
   images[0].addEventListener('load', render);
 
-  function render() {
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    context.drawImage(images[buds.frame], 0, 0, canvas.width, canvas.height);
-  }
+  //Resets canvas size when window is resized
+  window.addEventListener('resize', setCanvasSize); 
+
 
 })();
+
+
+//----------------------------------------------------------------------------------//
+
 
 //Model Viewer
 (() => {
@@ -123,7 +139,6 @@ const player = new Plyr('.player', {
 
   //FUNCTIONS
 
-  //Creates hotspot elements using array content and appends them to hotspot annotation divs
   function loadInfo() {
     infoBoxes.forEach((infoBox, index)=> {
 
@@ -144,7 +159,6 @@ const player = new Plyr('.player', {
     });
   }
 
-  //Shows hotspot annotation
   function showInfo() {
 
     //I changed the selector as I prefered to have the hover functionality only on the hotspot dots
@@ -170,7 +184,6 @@ const player = new Plyr('.player', {
     gsap.to(selected, {autoAlpha: 0, scale: 0.8, rotation: -5, duration: 0.3, ease: "power3.in"});
   }
   
-  //Loads model first before hotspot content (only on tablet and )
   function modelLoaded() {
       loadInfo();
   }
@@ -182,38 +195,38 @@ const player = new Plyr('.player', {
   hotspotDots.forEach(function (hotspot) {
       hotspot.addEventListener("mouseenter", showInfo);
       hotspot.addEventListener("mouseleave", hideInfo);
-});
+  });
 
 })();
+
+
+//----------------------------------------------------------------------------------//
 
 
 //Features
 (() => {
 
-  //VARIABLES
-  const infoCardImage = document.querySelectorAll('.info-card-image');
-  const infoCardText = document.querySelectorAll('.info-card-text');
+  const infoCards = document.querySelectorAll('.info-card');
 
+  infoCards.forEach(card => {
 
-  //FUNCTIONS
-  function toggleInfoText(event) {
-    const clickedElement = event.target.closest('.info-card-image');
-    
-    infoCardImage.forEach((image, index) => {
-        if (image === clickedElement) {
-            infoCardText[index].classList.toggle('show');
-            image.classList.toggle('active'); 
-        }
-    });
-  }
+    const image = card.querySelector('.info-card-image');
+    const text = card.querySelector('.info-card-text');
 
-  //EVENT LISTENERS
+    function toggleInfo() {
+      text.classList.toggle('show');
+      image.classList.toggle('active');
+    }
 
-  infoCardImage.forEach(image => {
-    image.addEventListener('click', toggleInfoText);
-  }); 
+    image.addEventListener('click', toggleInfo);
+
+  });
 
 })();
+
+
+//----------------------------------------------------------------------------------//
+
 
 //X-Ray Slider
 (() => {
@@ -235,6 +248,9 @@ const player = new Plyr('.player', {
   slider.addEventListener('input', moveDivisor);
   window.addEventListener('load', resetSlider);
 })();
+
+
+//----------------------------------------------------------------------------------//
 
 
 //GSAP
@@ -264,9 +280,9 @@ const player = new Plyr('.player', {
     });
 
     oddInfoCards.forEach((card) => {
-      gsap.set(card, { opacity: 0, x: 50 });
-    
-      gsap.to(card, {
+      gsap.from(card, {
+        opacity: 0,
+        x: 50,
         scrollTrigger: {
           trigger: card,
           start: "top 80%", 
@@ -274,17 +290,15 @@ const player = new Plyr('.player', {
           toggleActions: "play none none reverse",
           scrub: 0.3,
         },
-        opacity: 1,
-        x: 0,
         duration: 1,
         ease: "power1.out", 
       });
     });
     
     evenInfoCards.forEach((card) => {
-      gsap.set(card, { opacity: 0, x: -50 });
-    
-      gsap.to(card, {
+      gsap.from(card, {
+        opacity: 0,
+        x: -50,
         scrollTrigger: {
           trigger: card,
           start: "top 80%",
@@ -292,8 +306,6 @@ const player = new Plyr('.player', {
           toggleActions: "play none none reverse",
           scrub: 0.3,
         },
-        opacity: 1,
-        x: 0,
         duration: 1,
         ease: "power1.out",
       });
