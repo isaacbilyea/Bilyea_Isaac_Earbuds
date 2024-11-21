@@ -4,6 +4,7 @@
 #hero-con {
 
     margin: 3rem 0;
+    max-width: 1200px;
 
     #hero-video {
         width: 90vw;
@@ -61,9 +62,6 @@
     margin: 0 auto;
     margin-bottom: 3rem;
 
-    video {
-        width: 90vw;
-    }
 }
 
 .plyr--video {
